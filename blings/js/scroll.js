@@ -1,9 +1,10 @@
 $(function(){
-	var menu = document.querySelector('.page-header-mid');
-	var origOffsetY = 92;
+	var origOffsetY = $('.showcase').height()-390;
 	function scroll(){
-		if ($(window).scrollTop() >= origOffsetY) {$('.page-header-mid').addClass('nav-static');} 
+		if ($(window).scrollTop() >= 92) {$('.page-header-mid').addClass('nav-static');} 
 		else {$('.page-header-mid').removeClass('nav-static');}
+		if ($(window).scrollTop() >= origOffsetY) {$('.sidenav').addClass('sidenav-hidden');} 
+		else {$('.sidenav').removeClass('sidenav-hidden');}
 	}
 	document.onscroll = scroll;
 })
