@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>Bling-blings</title>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="css/style.css" />
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.masonry.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.responsiveText.js"></script>
+	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+</head>
+<body>
+	<div class="page">
+		<header class="page-header mb0">		
+			<section class="page-header-top">
+				<div class="container">
+					<div class="prop">
+						<div class="cols">
+							<div class="col1">
+								<ul class="contact hidden-tablet">
+									<li class="mail">
+										<a class="push" href="#"><i class="icon"></i></a>
+									</li>
+									<li class="tel wrapper-dropdown" id="dd2">
+										<a class="push" href="#"><i class="icon"></i></a>
+										<div class="hint">
+											<div class="hint-cnt">
+												<div class="phone">8 (499) 704-34-26</div>
+												<div class="btn-wrap">
+													<a class="btn" href="#">Позвонить с сайта</a>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="map wrapper-dropdown" id="dd3">
+										<a class="push" href="#"><i class="icon"></i></a>
+										<div class="hint">
+											<div class="hint-cnt">
+												<div class="addr">Москва, Подсосенский пер. 21/5</div>
+												<div class="map-wrap">
+													<div class="map-canvas" id="map_canvas"></div>
+												</div>
+												<div class="btn-wrap">
+													<a class="btn" href="map.html">Открыть карту</a>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<a class="btn-navbar visible-tablet" href="#">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</a>
+							</div>
+							<div class="col2">
+								<div class="logo-wrap">
+									<a class="logo" href="index.html"></a>
+								</div>
+							</div>
+							<div class="col3">
+								<div class="cart wrapper-dropdown" id="dd4">
+									<span class="capt hidden-tablet">Корзина пуста</span><span class="qty hidden visible-tablet">0</span>
+									<div class="hint">
+										<div class="hint-cnt">
+											<div class="items">
+												<div class="item">
+													<div class="figure">
+														<a href="#"><img width="70" height="70" src="images/thumb1.jpg" alt="" /></a>
+													</div>
+													<div class="descript">
+														<a class="del" href="#"></a>
+														<div class="title"><a href="#">Шампунь<br /> для кудрявых<br /> волос "Конопляный"</a></div>
+														<div class="preorder">
+															<div class="count">
+																<a class="minus" href="#"></a>
+																<a class="plus" href="#"></a>
+																<input type="text" value="1" />
+															</div>
+															<div class="price">2 560 руб.</div>
+														</div>
+													</div>
+												</div>
+												<div class="sum">
+													<span class="total">Итого</span><span class="price">2 560 руб.</span>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<a class="btn" href="cart.html">Перейти в корзину</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-header-mid hidden-tablet">
+				<div class="container">
+					<div class="prop">
+						<div class="cols">
+							<div class="col1">
+								<div class="search">
+									<form action="" method="post">
+										<input type="text" placeholder="Поиск по каталогу" />
+										<button type="submit"></button>
+									</form>
+								</div>
+							</div>
+							<div class="col2">
+								<nav class="tm">
+									<ul>
+										<li><a href="#">Украшения</a></li>
+										<li class="dir">
+											<a href="#">Косметика</a>
+											<div class="sub">
+												<div class="sub-cnt">
+													<div class="columns switchboard">
+														<div class="column">
+															<div class="column-cnt">
+																<ul class="switch">
+																	<li><a href="#" rel="#tab1">Для лица</a></li>
+																	<li class="current"><a href="#" rel="#tab2">Для волос</a></li>
+																	<li><a href="#" rel="#tab3">Для тела</a></li>
+																	<li><a href="#" rel="#tab4">Для ногтей</a></li>
+																	<li><a href="#" rel="#tab5">Паста и щетки</a></li>
+																</ul>
+															</div>
+														</div>
+														<div class="tabs">
+															<div class="tab" id="tab1">
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Для лица</div>
+																		<ul>
+																			<li><a href="catalog.html">Пункты для лица</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="tab" id="tab2" style="display: block;">
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Шампуни</div>
+																		<ul>
+																			<li><a href="catalog.html">Для нормальных волос</a></li>
+																			<li><a href="catalog.html">Для сухих волос</a></li>
+																			<li><a href="catalog.html">Для кудрявых волос</a></li>
+																			<li><a href="catalog.html">Для объема</a></li>
+																			<li><a href="catalog.html">Для блеска</a></li>
+																			<li><a href="catalog.html">Для поврежденных волос</a></li>
+																			<li><a href="catalog.html">Для окрашенных волос</a></li>
+																			<li><a href="catalog.html">Бестселлеры</a></li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Кондиционеры</div>
+																		<ul>
+																			<li><a href="#">Для нормальных волос</a></li>
+																			<li><a href="#">Для сухих волос</a></li>
+																			<li><a href="#">Для кудрявых волос</a></li>
+																			<li><a href="#">Для объема</a></li>
+																			<li><a href="#">Бестселлеры</a></li>
+																		</ul>
+																	</div>
+																</div>
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Маски</div>
+																		<ul>
+																			<li><a href="#">Для нормальных волос</a></li>
+																			<li><a href="#">Для сухих волос</a></li>
+																			<li><a href="#">Для кудрявых волос</a></li>
+																			<li><a href="#">Для объема</a></li>
+																			<li><a href="#">Для блеска</a></li>
+																			<li><a href="#">Для поврежденных волос</a></li>
+																			<li><a href="#">Бестселлеры</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="tab" id="tab3">
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Для тела</div>
+																		<ul>
+																			<li><a href="catalog.html">Пункты для тела</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="tab" id="tab4">
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Для ногтей</div>
+																		<ul>
+																			<li><a href="catalog.html">Пункты для ногтей</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="tab" id="tab5">
+																<div class="column">
+																	<div class="column-cnt">
+																		<div class="capt">Паста и щетки</div>
+																		<ul>
+																			<li><a href="catalog.html">Пункты паста и щетки</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li><a href="#">Аксессуары</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col3">
+								<nav class="sm">
+									<ul>
+										<li><a href="#">Информация</a></li>
+										<li><a href="blog.html">Блог</a></li>
+										<li><a href="#">Бренды</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<ul class="contacts">
+							<li class="phone">8 (499) 704-34-26</li>
+							<li class="addr">Подсосенский пер. 21/5</li>
+							<li class="email">hello@bling-blings.ru</li>
+						</ul>
+					</div>
+					<a class="close" href="#"></a>
+				</div>
+			</section>
+		</header>
+		<section class="page-body">
+			<section class="content">
+				<section class="thanks">
+					<div class="container">
+						<div class="prop">
+							<div class="label"></div>
+							<div class="descript">
+								<div class="capt">Валентина,<br /> все получилось!</div>
+								<div class="text">
+									<p>Наши менеджеры свяжутся с вами по телефону: +370 29 702 66 00 и Стратегическое планирование, отбрасывая подробности, изящно притягивает портрет потребителя, используя опыт предыдущих кампаний.</p>
+								</div>
+								<div class="agent">Искренне ваша, Мария Тимошенко</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</section>
+		<footer class="page-footer">
+			<div class="container">
+				<div class="label"></div>
+				<nav class="bm">
+					<ul>
+						<li>
+							<a href="#">Идея и история</a>
+						</li><li>
+							<a href="#">Стоимость и доставка</a>
+						</li><li>
+							<a href="#">Вакансии</a>
+						</li><li>
+						`<a href="#">Возврат и гарантия</a>
+					</li>
+					</ul>
+				</nav>
+				<div class="copyright">2014 © Bling-Blings. Все цены указаны в рублях.</div>
+				<ul class="social">
+					<li class="fb">
+						<a href="#"><i class="icon"></i></a>
+					</li><li class="vk">
+						<a href="#"><i class="icon"></i></a>
+					</li><li class="ig">
+						<a href="#"><i class="icon"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
