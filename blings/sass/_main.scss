@@ -3344,3 +3344,72 @@ h3 {
 		}
 	}
 }
+
+.poster {
+	margin-bottom: 25px;
+	position: relative;
+	.marker {
+		width: 38px;
+		height: 38px;
+		position: absolute;
+		cursor: pointer;
+		.marker-cnt {
+			width: 38px;
+			height: 38px;
+			position: relative;
+		}
+		.circle {
+			display: block;
+			width: 38px;
+			height: 38px;
+			@include retina-sprite(circle);
+			&:hover {
+				@include retina-sprite(circle-hover);
+			}
+		}
+		.descript {
+			display: none;
+			width: 220px;
+			padding: 16px 18px;
+			position: absolute;
+			top: -10px;
+			left: 110px;
+			border: 1px solid #d4e0e7;
+			background: #fff;
+			z-index: 10;
+			&:before {
+				display: block;
+				content: '';
+				width: 70px;
+				height: 2px;
+				position: absolute;
+				top: 27px;
+				left: -70px;
+				background: url(../img/dot.png) repeat-x 0 0;
+			}
+			.ttl {
+				margin-bottom: 7px;
+				color: #2378a5;
+				font-size: 14px;
+				text-transform: uppercase;
+			}
+			.txt {
+				color: #707070;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+		&:hover .descript {
+			display: block;
+		}
+	}
+	.marker_right {
+		.descript {
+			left: -330px;
+			&:before {
+				left: auto;
+				right: -70px;
+			}
+		}
+	}
+}
