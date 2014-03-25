@@ -51,6 +51,10 @@ h3 {
 	font-size: 22px;
 }
 
+.upper {
+	text-transform: uppercase;
+}
+
 .hidden {
 	display: none!important;
 }
@@ -543,6 +547,7 @@ h3 {
 			display: inline-block;
 			height: 35px;
 			margin-left: 30px;
+			position: relative;
 			font-size: 14px;
 			line-height: 35px;
 			a {
@@ -556,7 +561,19 @@ h3 {
 					}
 				}
 			}
-			
+			sup {
+				margin-left: 2px;
+				position: absolute;
+				top: 5px;
+				left: 100%;
+				color: #ff0000;
+				font-size: 12px;
+				line-height: 12px;
+				span {
+					font-size: 10px;
+					vertical-align: middle;
+				}
+			}
 		}
 	}
 	.tm {
@@ -2147,6 +2164,20 @@ h3 {
 	.cnt-wrap {
 		margin-bottom: 50px;
 	}
+	.supcase {
+		margin: -100px 70px 0;
+		padding: 40px;
+		position: relative;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.05em;
+		background: #fff;
+		@include respond-to(medium-screen) {
+			margin: 0;
+			padding: 40px 20px;
+		}
+	}
 	.row {
 		.columns {
 			overflow: hidden;
@@ -2204,6 +2235,9 @@ h3 {
 					margin-bottom: 30px;
 					font-size: 34px;
 					line-height: 42px;
+				}
+				.blog &.upper {
+					font-size: 28px;
 				}
 			}
 			h1 {
@@ -2287,18 +2321,13 @@ h3 {
 				}
 				.board {
 					width: 240px;
-					padding: 15px 0;
+					padding: 0 0 15px 0;
 					float: right;
 					position: relative;
-					&:after {
-						display: block;
-						content: '';
+					.board-line {
 						width: 177px;
 						height: 6px;
-						margin-left: -90px;
-						position: absolute;
-						top: 0;
-						left: 50%;
+						margin: 0 auto 10px;
 						@include retina-sprite(i_top_bg);
 					}
 					@include respond-to(medium-screen) {
@@ -2337,6 +2366,51 @@ h3 {
 						}
 					}
 				}
+				.grid-cols2 {
+					padding-bottom: 40px;
+					overflow: hidden;
+					.col {
+						width: 50%;
+						float: left;
+						.col-cnt {
+							padding-right: 20px;
+							.text p {
+								margin-bottom: 18px;
+							}
+						}
+						@include respond-to(medium-screen) {
+							width: auto;
+							float: none;
+							.col-cnt { 
+								padding: 0;
+							}
+						}
+					}
+				}
+				.command {
+					width: 240px;
+					margin: 0 auto;
+					text-align: center;
+					figure {
+						width: 240px;
+						height: 240px;
+						margin-bottom: 25px;
+						overflow: hidden;
+						img {
+							border-radius: 50%;
+						}
+					}
+					.name {
+						margin-bottom: 7px;
+						font-size: 20px;
+					}
+					.post {
+						font-size: 15px;
+					}
+					@include respond-to(medium-screen) {
+						padding-bottom: 25px;
+					}
+				}
 			}
 			.column2-indent {
 				margin-left: -20px;
@@ -2355,17 +2429,15 @@ h3 {
 	}
 	.row1 {
 		.column2 {
-			.cnt {
-				.text {
-					p:first-child {
-						position: relative;
-						&:first-letter {
-							padding: 3px 8px 0 0;
-							float: left;
-							font-size: 52px;
-						}
-					}	
-				}
+			.text {
+				p:first-child {
+					position: relative;
+					&:first-letter {
+						padding: 3px 8px 0 0;
+						float: left;
+						font-size: 52px;
+					}
+				}	
 			}
 		}
 	}
@@ -2663,6 +2735,17 @@ h3 {
 			vertical-align: middle;
 		}
 	}
+	.total {
+		padding: 40px 20px 35px;
+		font-size: 22px;
+		@extend .bold;
+		line-height: 1.4;
+		text-align: center;
+		text-transform: uppercase;
+		span {
+			color: #f74032;
+		}
+	}
 	.cart-order {
 		table {
 			width: 100%;
@@ -2747,17 +2830,6 @@ h3 {
 					border:  1px solid #f1f1f1;
 					background: #fff;
 				}
-			}
-		}
-		.total {
-			padding: 40px 20px 35px;
-			font-size: 22px;
-			@extend .bold;
-			line-height: 1.4;
-			text-align: center;
-			text-transform: uppercase;
-			span {
-				color: #f74032;
 			}
 		}
 	}
@@ -3410,6 +3482,29 @@ h3 {
 				left: auto;
 				right: -70px;
 			}
+		}
+	}
+}
+
+.btn-add-wrap {
+	margin-bottom: 25px;
+	.btn-add {
+		display: block;
+		width: 160px;
+		height: 41px;
+		margin: 0 auto;
+		color: #fff;
+		font-size: 14px;
+		@extend .bold;
+		line-height: 43px;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		border: 2px solid #196396;
+		background: #196396;
+		&:hover {
+			color: #000;
+			background: none;
 		}
 	}
 }

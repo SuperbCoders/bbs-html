@@ -21,6 +21,11 @@
 	<script type="text/javascript" src="js/dropdown.js"></script>
 	<script type="text/javascript" src="js/scroll.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#carousel7').carouFredSel({circular:1,auto:false,responsive:true,width:'100%',height:'verible',scroll:1,prev:'#prev7',next:'#next7',items: {height: '100%',visible:{min:1,max:3},start:-1},swipe:{onMouse:true,onTouch:true}}).trigger('resize');
+		});
+	</script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
 	<script type="text/javascript" src="js/map.js"></script>
 </head>
@@ -446,6 +451,8 @@
 									<div class="column2">
 										<div class="cnt2">
 											<div class="board">
+												<div class="btn-add-wrap"><a class="btn-add" href="#">Оставить отзыв</a></div>
+												<div class="board-line"></div>
 												<div class="figure"><a href="#"><img src="images/240_180/5.jpg" alt="" /></a></div>
 												<div class="descript">
 													<p>Шампунь для кудрявых волос «Конопляный»</p>
@@ -537,6 +544,7 @@
 									<div class="column2">
 										<div class="cnt">
 											<div class="board">
+												<div class="board-line"></div>
 												<div class="figure"><a href="#"><img src="images/240_180/11.jpg" alt="" /></a></div>
 												<div class="descript">
 													<a class="link" href="#">Все товары бренда</a>
