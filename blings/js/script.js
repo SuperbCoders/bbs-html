@@ -13,7 +13,7 @@ $(function(){
 	$(document).click(function(){$('.wrapper-dropdown').removeClass('active');});
 	$('.tm .dir').mouseover(function(){$('.wrapper-dropdown').removeClass('active');});
 	$('.switchboard .switch a').click(function(){var a=$(this).attr('rel');$(this).parents('li').addClass('current').siblings('li').removeClass();$(this).parents('.switchboard').find('.tabs .tab').hide();$(this).parents('.switchboard').find('.tabs '+a).show();return false;});
-	$('.switcher label').click(function(){$(this).parents('li').addClass('current').siblings('li').removeClass();return false;});
+	$('.switcher label').click(function(){$(this).parents('li').addClass('current').siblings('li').removeClass();});
 	$('.search input').focus(function(){$(this).parents('.search').addClass('focus');});
 	$('.search input').focusout(function(){$(this).parents('.search').removeClass('focus');});
 	$('.btn-navbar').click(function(){$('.page-header-mid').addClass('nav-fullsize');$('.wrapper-dropdown').removeClass('active');$('body').addClass('overley');return false;});
@@ -22,4 +22,14 @@ $(function(){
 	$('.product .order .btn').click(function(){
 		$(this).animate({opacity:0},1000,function(){$(this).html('Спасибо');}).animate({opacity: 1},1000,function(){$(this).animate({opacity:0},1000,function(){$(this).html('В корзину');}).animate({opacity: 1},1000);});
 	});
+	if($('.popup-with-form').length){$('.popup-with-form').magnificPopup({type:'inline',preloader:false});};
+	if($('.checkbox-field').length){$('.checkbox-field').styler();};
+	$('#popup-form .row-capt-rule .arrow').click(function(){$('#popup-form .row-rule').slideToggle('slow'); return false;});
+	
+	if($('.hover-star').length){
+		$('.hover-star').rating({
+			focus: function(value, link){var tip = $('#hover-test'); tip[0].data = tip[0].data || tip.html(); tip.html(link.title || 'value: '+value);},
+			blur: function(value, link){var tip = $('#hover-test');	$('#hover-test').html(tip[0].data || '');}
+		});
+	};
 });

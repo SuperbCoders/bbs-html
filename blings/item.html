@@ -18,6 +18,9 @@
 	<script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.masonry.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.responsiveText.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.formstyler.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.rating.js"></script>
 	<script type="text/javascript" src="js/dropdown.js"></script>
 	<script type="text/javascript" src="js/scroll.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
@@ -451,7 +454,7 @@
 									<div class="column2">
 										<div class="cnt2">
 											<div class="board">
-												<div class="btn-add-wrap"><a class="btn-add" href="#">Оставить отзыв</a></div>
+												<div class="btn-add-wrap"><a class="btn-add popup-with-form" href="#popup-form">Оставить отзыв</a></div>
 												<div class="board-line"></div>
 												<div class="figure"><a href="#"><img src="images/240_180/5.jpg" alt="" /></a></div>
 												<div class="descript">
@@ -729,6 +732,58 @@
 				</ul>
 			</div>
 		</footer>
+	</div>
+	<div id="popup-form" class="mfp-hide white-popup-block">
+		<div class="popup-hint hidden-tablet">
+			<p>Сфокусируйтесь на продукте и опишите подробно опыт его использования</p>
+			<p>Объясните, почему он вам понравился или не понравился, с какими проблемами он помог справиться.</p>
+		</div>
+		<form action="" method="post">
+			<div class="row">
+				<h2>Добавление отзыва</h2>
+			</div>
+			<div class="row">
+				<div class="row-capt">Оцените продукт</div>
+				<div class="rate">
+					 <input class="hover-star" type="radio" name="rating" value="1" title="Очень плохой!"/>
+					 <input class="hover-star" type="radio" name="rating" value="2" title="Плохой"/>
+					 <input class="hover-star" type="radio" name="rating" value="3" title="Нормальный"/>
+					 <input class="hover-star" type="radio" name="rating" value="4" title="Хороший"/>
+					 <input class="hover-star" type="radio" name="rating" value="5" title="Очень хороший!"/>
+					 <span id="hover-test">&nbsp;</span>
+				</div>	
+			</div>
+			<div class="row">
+				<div class="row-capt">Оставьте отзыв</div>
+				<textarea rows="" cols="" placeholder="Текст не должен быть меньше 70 знаков"></textarea>
+			</div>
+			<div class="row">
+				<div class="row-capt">Охарактеризуйте продукт</div>
+				<ul class="props">
+					<li><div class="checkbox-wrap"><label class="checkbox"><input class="checkbox-field" type="checkbox" /><span class="checkbox-label">Легкая формула</span></label></div></li>
+					<li><div class="checkbox-wrap"><label class="checkbox"><input class="checkbox-field" type="checkbox" /><span class="checkbox-label">Хорошо увлажняет</span></label></div></li>
+					<li><div class="checkbox-wrap"><label class="checkbox"><input class="checkbox-field" type="checkbox" /><span class="checkbox-label">Некомедогенный</span></label></div></li>
+					<li><div class="checkbox-wrap"><label class="checkbox"><input class="checkbox-field" type="checkbox" /><span class="checkbox-label">Приятный аромат</span></label></div></li>
+					<li><div class="prop-add"><input type="text" placeholder="Добавить свое" /><a class="plus" href="#">+</a></div></li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="row-capt row-capt-rule"><a class="arrow" href="#"></a> Правила публикации отзыва</div>
+				<div class="row-rule">
+					<p>Каждый отзыв проходит премодерацию перед публикацией, мы оставляем за собой право не публиковать отзыв, если он содержит следующую информацию: </p>
+					<ul>
+						<li>Ссылки на другие сайты и упоминания других продуктов, магазинов, электронный адрес, телефон, адрес и другая контактная информация;</li>
+						<li>Реклама или "спам";</li>
+						<li>Нецензурные выражения;</li>
+						<li>Критические высказывания насчет других отзывов;</li>
+						<li>Обсуждение медицинской эффективности и медицинских рекомендаций.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<button class="btn-send" type="submit">Отправить отзыв на модерацию</button>
+			</div>
+		</form>
 	</div>
 </body>
 </html>
