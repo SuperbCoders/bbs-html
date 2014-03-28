@@ -10,7 +10,6 @@
 	<!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5shiv.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="js/vendor/modernizr.custom.79639.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
@@ -37,8 +36,8 @@
 										<a class="push" href="#"><i class="icon"></i></a>
 									</li>
 									<li class="tel wrapper-dropdown" id="dd2">
-										<a class="push" href="#"><i class="icon"></i></a>
-										<div class="hint">
+										<a class="push" data-dropdown="#dropdown-2" href="#" ><i class="icon"></i></a>
+										<div class="hint dropdown" id="dropdown-2">
 											<div class="hint-cnt">
 												<div class="phone">8 (499) 704-34-26</div>
 												<div class="btn-wrap">
@@ -48,8 +47,8 @@
 										</div>
 									</li>
 									<li class="map wrapper-dropdown" id="dd3">
-										<a class="push" href="#"><i class="icon"></i></a>
-										<div class="hint">
+										<a class="push" data-dropdown="#dropdown-3" href="#"><i class="icon"></i></a>
+										<div class="hint dropdown" id="dropdown-3">
 											<div class="hint-cnt">
 												<div class="addr">Москва, Подсосенский пер. 21/5</div>
 												<div class="map-wrap">
@@ -75,8 +74,8 @@
 							</div>
 							<div class="col3">
 								<div class="cart wrapper-dropdown" id="dd4">
-									<span class="capt hidden-tablet">Ваша корзина</span><span class="sep hidden-tablet"></span><span class="qty">2</span>
-									<div class="hint">
+									<span class="capt hidden-tablet"><a href="cart.html">Ваша корзина</a></span><span class="sep hidden-tablet"></span><span class="qty visible-tablet" data-dropdown="#dropdown-4">2</span>
+									<div class="hint dropdown" id="dropdown-4">
 										<div class="hint-cnt">
 											<div class="items">
 												<div class="item">
@@ -96,9 +95,26 @@
 														</div>
 													</div>
 												</div>
-												<div class="sum">
-													<span class="total">Итого</span><span class="price">2 560 руб.</span>
+												<div class="item">
+													<div class="figure">
+														<a href="#"><img width="70" height="70" src="images/thumb1.jpg" alt="" /></a>
+													</div>
+													<div class="descript">
+														<a class="del" href="#"></a>
+														<div class="title"><a href="#">Шампунь<br /> для кудрявых<br /> волос "Конопляный"</a></div>
+														<div class="preorder">
+															<div class="count">
+																<a class="minus" href="#"></a>
+																<a class="plus" href="#"></a>
+																<input type="text" value="1" />
+															</div>
+															<div class="price">2 560 руб.</div>
+														</div>
+													</div>
 												</div>
+											</div>
+											<div class="sum">
+												<span class="total">Итого</span><span class="price">2 560 руб.</span>
 											</div>
 											<div class="btn-wrap">
 												<a class="btn" href="cart.html">Перейти в корзину</a>
@@ -111,7 +127,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page-header-mid hidden-tablet">
+			<section class="page-header-mid hidden-tablet" id="menu-top">
 				<div class="container">
 					<div class="prop">
 						<div class="cols">
