@@ -2441,6 +2441,7 @@ h3 {
 						padding: 3px 8px 0 0;
 						float: left;
 						font-size: 52px;
+						line-height: 49px;
 					}
 				}	
 			}
@@ -2825,15 +2826,38 @@ h3 {
 				&.center {
 					text-align: center;
 				}
-				input {
-					width: 20px;
-					height: 16px;
-					padding: 7px 10px 5px;
+				
+				.count {
+					width: 42px;
+					height: 30px;
+					padding: 0 20px;
 					margin: 0 auto;
-					font-size: 14px;
-					text-align: center;
-					border:  1px solid #f1f1f1;
-					background: #fff;
+					position: relative;
+					input {
+						width: 20px;
+						height: 16px;
+						padding: 7px 10px 5px;
+						margin: 0 auto;
+						font-size: 14px;
+						text-align: center;
+						border:  1px solid #f1f1f1;
+						background: #fff;
+					}
+					.minus, .plus {
+						display: block;
+						width: 10px;
+						height: 10px;
+						position: absolute;
+						top: 10px;
+					}
+					.minus {
+						left: 0;
+						@include retina-sprite(btn_minus);
+					}
+					.plus {
+						right: 0;
+						@include retina-sprite(btn_plus);
+					}
 				}
 			}
 		}
