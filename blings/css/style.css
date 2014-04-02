@@ -79,7 +79,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 2, ../sass/_main.scss */
-.bold, h1, h2, h3, h4, h5, h6, b, .page-header-top .hint .items .item .descript .preorder .price, .page-header-top .hint .sum .price, .page-header-top .hint .btn, .page-header-top .cart .capt, .page-header-top .cart .sep, .page-header-top .cart .qty, .page-header-mid .tm li, .page-header-bt .rm li, .banners .cols .col1 .cnt-wrap .descript, .banners .cols .col2 .cnt-wrap .descript, .btn-more-wrap .btn-more .hint, .products .items .item .descript .price, .products .items .item .descript .btn, .page-footer .bm li, .intro .title, .intro .btn-wrap .btn, .network li a, .sidenav .switch li .capt, .product .columns .column2 .descript .capt, .product .columns .column3 .order .price, .product .columns .column3 .order .btn-wrap .btn, .product .columns .column3 .set-wrap .set .caption, #slider6 ul li .cost .price, #slider6 ul li .cost .btn, .description .row .columns .column2 .board .descript .btn, .feature .item .numb, .comments .item .descript .name, .reviews .item .descript .title, .cart .step .numb, .cart .total, .cart .cart-order table td b, .cart .cart-data .forms .row .col1 label, .cart .cart-submit .btn-wrap .btn, .switcher ul li label b, .user .info .author, .blogs .item .descript .title, .btn-add-wrap .btn-add, .white-popup-block .row .btn-send {
+.bold, h1, h2, h3, h4, h5, h6, b, .page-header-top .hint .items .item .descript .preorder .price, .page-header-top .hint .sum .price, .page-header-top .hint .btn, .page-header-top .cart .capt, .page-header-top .cart .sep, .page-header-top .cart .qty, .page-header-mid .tm li, .page-header-bt .rm li, .banners .cols .col1 .cnt-wrap .descript, .banners .cols .col2 .cnt-wrap .descript, .btn-more-wrap .btn-more .hint, .products .items .item .descript .price, .products .items .item .descript .btn, .page-footer .bm li, .intro .title, .intro .btn-wrap .btn, .network li a, .sidenav .switch li .capt, .product .columns .column2 .descript .capt, .product .columns .column3 .order .price, .product .columns .column3 .order .btn-wrap .btn, .product .columns .column3 .set-wrap .set .caption, #slider6 ul li .cost .price, #slider6 ul li .cost .btn, .description .row .columns .column2 .board .descript .btn, .feature .item .numb, .comments .item .descript .name, .reviews .item .descript .title, .cart .step .numb, .cart .total, .cart .cart-order table td b, .cart .cart-data .forms .row .col1 label, .cart .cart-submit .btn-wrap .btn, .switcher ul li label b, .user .info .author, .blogs .item .descript .title, .btn-add-wrap .btn-add, .white-popup-block .row .btn-send, .brand .brands-list .items .item .descript .title, .brand .landing .descript .title {
   font-family: 'Circe-Bold', Arial, Helvetica, serif;
 }
 
@@ -1283,7 +1283,7 @@ h3 {
   top: 0;
   left: 0;
   background: #262626 !important;
-  z-index: 100;
+  z-index: 1000;
 }
 /* line 765, ../sass/_main.scss */
 .nav-fullsize .container {
@@ -5441,6 +5441,120 @@ h3 {
 .rate #hover-test {
   margin: 3px 0 0 20px;
   float: left;
+}
+
+/* line 3748, ../sass/_main.scss */
+.brand .container_w {
+  max-width: 750px;
+}
+/* line 3750, ../sass/_main.scss */
+.brand .container_w h2 {
+  margin-bottom: 50px !important;
+  font-size: 34px !important;
+  text-align: center;
+}
+/* line 3755, ../sass/_main.scss */
+.brand .container_w .row1 {
+  padding-bottom: 40px;
+}
+/* line 3761, ../sass/_main.scss */
+.brand .description .text p {
+  font-size: 16px;
+  line-height: 26px;
+}
+/* line 3768, ../sass/_main.scss */
+.brand .brands-list .items {
+  text-align: center;
+}
+/* line 3770, ../sass/_main.scss */
+.brand .brands-list .items .item {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  vertical-align: top;
+  background: url(../img/bg_transparen.png) repeat 0 0;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+/* line 3779, ../sass/_main.scss */
+.brand .brands-list .items .item .overlayed {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* line 3787, ../sass/_main.scss */
+.brand .brands-list .items .item .descript {
+  display: table-cell;
+  width: 250px;
+  height: 250px;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 3795, ../sass/_main.scss */
+.brand .brands-list .items .item .descript .title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+/* line 3805, ../sass/_main.scss */
+.brand .landing {
+  width: 100%;
+  height: 474px;
+  background: url(../img/shade_bg.png) repeat-x 0 0;
+}
+/* line 3809, ../sass/_main.scss */
+.brand .landing .overlayed {
+  width: 100%;
+  height: 474px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+/* line 3823, ../sass/_main.scss */
+.brand .landing .prop {
+  max-width: 500px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+/* line 3828, ../sass/_main.scss */
+.brand .landing .descript {
+  display: table-cell;
+  width: 100%;
+  height: 474px;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 3835, ../sass/_main.scss */
+.brand .landing .descript .title {
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+/* line 3840, ../sass/_main.scss */
+.brand .landing .descript p {
+  margin-bottom: 14px;
+  font-size: 20px;
+  line-height: 24px;
+}
+/* line 3845, ../sass/_main.scss */
+.brand .landing .descript a {
+  color: #2dd2fb;
+}
+
+/* line 3852, ../sass/_main.scss */
+.center {
+  text-align: center;
 }
 
 /* Magnific Popup CSS */
