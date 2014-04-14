@@ -295,9 +295,11 @@ h3 {
 			text-transform: uppercase;
 			text-decoration: none;
 			border: 2px solid #fa4934;
-			&:hover {
-				color: #fff;
-				background: #fa4934;
+			@include respond-to(large-screen) {
+				&:hover {
+					color: #fff;
+					background: #fa4934;
+				}
 			}
 		}
 	}
@@ -577,6 +579,9 @@ h3 {
 				span {
 					font-size: 10px;
 					vertical-align: middle;
+				}
+				@include respond-to(medium-screen) {
+					display: none;
 				}
 			}
 		}
@@ -1163,7 +1168,7 @@ h3 {
 	.btn-more {
 		display: inline-block;
 		width: 32px;
-		heigght: 15px;
+		height: 15px;
 		position: relative;
 		@include retina-sprite(arr_down);
 		.hint {
@@ -1178,10 +1183,12 @@ h3 {
 			@extend .bold;
 			text-transform: uppercase;
 		}
-		&:hover {
-			@include retina-sprite(arr_down-hover);
-			.hint {
-				display: block;
+		@include respond-to(large-screen) {
+			&:hover {
+				@include retina-sprite(arr_down-hover);
+				.hint {
+					display: block;
+				}
 			}
 		}
 	}
@@ -1310,6 +1317,17 @@ h3 {
 				&:hover .info {
 					display: block;
 				}
+
+				&:hover {
+					.descript {
+						.price {
+							display: none;
+						}
+						.btn {
+							display: inline-block;
+						}
+					}
+				}	
 			}
 			.label {
 				width: 12px;
@@ -1343,17 +1361,7 @@ h3 {
 				&:hover .hint {
 					display: block;
 				} 
-			}
-			&:hover {
-				.descript {
-					.price {
-						display: none;
-					}
-					.btn {
-						display: inline-block;
-					}
-				}
-			}
+			}		
 		}
 		.item-inverse {
 			color: #fff;
@@ -1481,8 +1489,10 @@ h3 {
 				text-align: center;
 				line-height: 49px;
 				@include retina-sprite(social_rec);
-				&:hover {
-					@include retina-sprite(social_rec-hover);
+				@include respond-to(large-screen) {
+					&:hover {
+						@include retina-sprite(social_rec-hover);
+					}
 				}
 				.icon {
 					display: inline-block;
@@ -1546,8 +1556,10 @@ h3 {
 			text-transform: uppercase;
 			text-decoration: none;
 			border: 2px solid #fa4934;
-			&:hover {
-				background: #fa4934!important;
+			@include respond-to(large-screen) {
+				&:hover {
+					background: #fa4934!important;
+				}
 			}
 		}
 	}
@@ -1661,9 +1673,11 @@ h3 {
 			line-height: 60px;
 			text-transform: uppercase;
 			background: #fff;
-			&:hover {
-				color: #fff;
-				background: #405a80;
+			@include respond-to(large-screen) {
+				&:hover {
+					color: #fff;
+					background: #405a80;
+				}
 			}
 			.icon {
 				display: inline-block;
@@ -1682,9 +1696,11 @@ h3 {
 					height: 18px;
 					@include retina-sprite(icon-fb_b);
 				}
-				&:hover {
-					.icon {
-						@include retina-sprite(icon-fb_w);
+				@include respond-to(large-screen) {
+					&:hover {
+						.icon {
+							@include retina-sprite(icon-fb_w);
+						}
 					}
 				}
 			}
@@ -1696,9 +1712,11 @@ h3 {
 					height: 18px;
 					@include retina-sprite(icon-vk_b);
 				}
-				&:hover {
-					.icon {
-						@include retina-sprite(icon-vk_w);
+				@include respond-to(large-screen) {
+					&:hover {
+						.icon {
+							@include retina-sprite(icon-vk_w);
+						}
 					}
 				}
 			}
@@ -1710,9 +1728,11 @@ h3 {
 					height: 18px;
 					@include retina-sprite(icon-ig_b);
 				}
-				&:hover {
-					.icon {
-						@include retina-sprite(icon-ig_w);
+				@include respond-to(large-screen) {
+					&:hover {
+						.icon {
+							@include retina-sprite(icon-ig_w);
+						}
 					}
 				}
 			}
@@ -1753,8 +1773,10 @@ h3 {
 					height: 110px;
 					a {
 						opacity: 0.5;
-						&:hover {
-							opacity: 1;
+						@include respond-to(large-screen) {
+							&:hover {
+								opacity: 1;
+							}
 						}
 					}
 				}
@@ -1948,9 +1970,11 @@ h3 {
 						text-decoration: none;
 						border: 2px solid #fa4934;
 						background: #fa4934;
-						&:hover {
-							color: #000;
-							background: none;
+						@include respond-to(large-screen) {
+							&:hover {
+								color: #000;
+								background: none;
+							}
 						}
 					}
 				}
@@ -2142,9 +2166,11 @@ h3 {
 					text-transform: uppercase;
 					text-decoration: none;
 					border: 2px solid #2378a5;
-					&:hover {
-						color: #fff;
-						background: #2378a5;
+					@include respond-to(large-screen) {
+						&:hover {
+							color: #fff;
+							background: #2378a5;
+						}
 					}
 				}
 			}
@@ -2678,10 +2704,12 @@ h3 {
 			background: #e3e3e3;
 			@include border-radius(50%)
 		}
-		&:hover {
-			border-color: #bdbdbd;
-			&:before {
-				@include retina-sprite(tag_part-hover);
+		@include respond-to(large-screen) {
+			&:hover {
+				border-color: #bdbdbd;
+				&:before {
+					@include retina-sprite(tag_part-hover);
+				}
 			}
 		}
 	}
@@ -2812,16 +2840,11 @@ h3 {
 						margin: 13px auto;
 						@include retina-sprite(icon-del);
 					}
-					&:hover {
-						background-color: #efefef;
-						.hint {
-							display: block;
-						}
-					}
-					@include respond-to(medium-screen) {
+					@include respond-to(large-screen) {
 						&:hover {
+							background-color: #efefef;
 							.hint {
-								display: none;
+								display: block;
 							}
 						}
 					}
@@ -3004,9 +3027,11 @@ h3 {
 				border: 2px solid #fa4934;
 				background: #fa4934;
 				cursor: pointer;
-				&:hover {
-					color: #000;
-					background: #fff;
+				@include respond-to(large-screen) {
+					&:hover {
+						color: #000;
+						background: #fff;
+					}
 				}
 				@include respond-to(medium-screen) {
 					font-size: 12px;
@@ -3537,9 +3562,11 @@ h3 {
 		text-decoration: none;
 		border: 2px solid #196396;
 		background: #196396;
-		&:hover {
-			color: #000;
-			background: none;
+		@include respond-to(large-screen) {
+			&:hover {
+				color: #000;
+				background: none;
+			}
 		}
 	}
 }
