@@ -3136,6 +3136,9 @@ h3 {
 				padding: 20px 5px;
 				font-size: 14px;
 				border-bottom: 1px solid #f1f1f1;
+				&:first-child {
+					padding-left: 10px;
+				}
 				b {
 					@extend .bold;
 				}
@@ -3197,16 +3200,20 @@ h3 {
 					color: #000;
 				}
 				.figure {
-					margin-left: 5px;
+					display: table-cell;
 					img {
 						border: 1px solid #f1f1f1;
 						vertical-align: middle;
 					}
 				}
 				.title {
-					margin-left: 15px;
+					display: table-cell;
+					max-width: 460px;
+					padding-left: 15px;
+					line-height: 1.3;
+					vertical-align: middle;
 					@include respond-to(medium-screen) {
-						margin: 0;
+						padding-left: 0;
 					}
 				}
 				.del {
@@ -3218,11 +3225,15 @@ h3 {
 					background-color: #f6f6f6;
 					.hint {
 						display: none;
+						height: 31px;
+						padding: 0 15px 0 5px;
 						position: absolute;
-						top: 9px;
-						left: 40px;
+						top: 0;
+						left: 35px;
 						color: #000;
 						font-size: 12px;
+						line-height: 33px;
+						background: #fff;
 					}
 					.icon {
 						display: block;
@@ -4328,8 +4339,9 @@ h3 {
 			text-align: center;
 			.title {
 				margin-bottom: 10px;
-				font-size: 60px;
-				@extend .bold;
+				h1 {
+					font-size: 60px;
+				}
 			}
 			p {
 				margin-bottom: 14px;
