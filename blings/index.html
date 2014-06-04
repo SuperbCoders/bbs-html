@@ -49,13 +49,27 @@
 									<li class="map wrapper-dropdown" id="dd3">
 										<a class="push" data-dropdown="#dropdown-3" href="#"><i class="icon"></i></a>
 										<div class="hint dropdown" id="dropdown-3">
-											<div class="hint-cnt">
-												<div class="addr">Москва, Подсосенский пер. 21/5</div>
-												<div class="map-wrap">
-													<div class="map-canvas" id="map_canvas"></div>
+											<div class="addr">Наши магазины находятся в городе Москва</div>
+											<ul class="switch">
+												<li class="current"><a rel="#tab1" href="#">Подсосенский пер. 21/5</a></li>
+												<li><a rel="#tab2" href="#">Старопименский пер. 6</a></li>
+											</ul>
+											<div class="tabs">
+												<div class="tab" id="tab1" style="display: block;">
+													<div class="map-wrap">
+														<div class="map-canvas" id="map_canvas1"></div>
+														<div class="btn-wrap">
+															<a class="btn" href="map.html">Открыть карту</a>
+														</div>
+													</div>
 												</div>
-												<div class="btn-wrap">
-													<a class="btn" href="map.html">Открыть карту</a>
+												<div class="tab" id="tab2">
+													<div class="map-wrap">
+														<div class="map-canvas" id="map_canvas2"></div>
+														<div class="btn-wrap">
+															<a class="btn" href="map.html">Открыть карту</a>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -259,6 +273,7 @@
 										<li><a href="blog.html">Блог</a><sup>+<span>5</span></sup></li>
 										<li><a href="#">Бренды</a></li>
 									</ul>
+									<a class="sm-cart" href="#">12</a>
 								</nav>
 							</div>
 						</div>
@@ -606,17 +621,58 @@
 					</section>
 				</div>
 			</section>
-			<section class="concept" style="background-image: url(img/concept_bg.jpg);">
-				<div class="container">
+			<section class="concept">
 					<div class="intro">
-						<div class="title"><span class="hidden-phone">Магазин</span> Bling Blings</div>
-						<div class="descript">У нас вы можете купить украшения, косметику,<br /> штуки для дома и другие интересные вещи.</div>
+						<div class="title"><span class="hidden-phone">Офлайн магазины</span> Bling Blings</div>
+						<div class="descript">У нас вы можете купить украшения, косметику, штуки для дома и другие интересные вещи<br /> а еще сделать маникюр или небольшую стрижку</div>
 						<div class="btn-wrap"><a class="btn" href="#">О магазине</a></div>
 					</div>
 					<ul class="contacts">
-						<li>hello@bling-blings.ru</li>
-						<li>8 (499) 704-34-26</li>
-						<li>Подсосенский пер. 21/5</li>
+						<li style="background-image: url(img/concept_bg.jpg);">
+							<div class="descript">
+								<i class="icon"></i>
+								<div class="addr"><span class="dot"><a href="#">Подсосенский пер. 21/5</a></span></div>
+								<div class="tel">8-967-135-63-17</div>
+							</div>
+							<div class="map-wrap">
+								<div class="map-addr" id="map_addr1"></div>
+								<div class="btn-wrap">
+									<a class="btn" href="#">Закрыть</a>
+								</div>
+							</div>
+						</li>
+						<li style="background-image: url(img/concept_bg.jpg);">
+							<div class="descript">
+								<i class="icon"></i>
+								<div class="addr"><span class="dot"><a href="#">Старопименский пер. 6</a></span></div>
+								<div class="tel">8 (495) 699-20-51</div>
+							</div>
+							<div class="map-wrap">
+								<div class="map-addr" id="map_addr2"></div>
+								<div class="btn-wrap">
+									<a class="btn" href="#">Закрыть</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="site hidden-tablet">hello@bling-blings.ru</div>
+					<span class="cross"></span>
+			</section>
+			<section class="servs">
+				<div class="container">
+					<ul>
+						<li class="item1">
+							<i class="icon"></i>
+							<div class="descript">Доставка<br /> по всей России</div>
+						</li>
+						<li class="item2">
+							<i class="icon"></i>
+							<div class="descript">Быстрая доставка курьером<br /> по Москве</div>
+						</li>
+						<li class="item3">
+							<i class="icon"></i>
+							<div class="descript">Офлайн-магазины открыты<br /> с 11.00 до 20.00</div>
+						</li>
 					</ul>
 				</div>
 			</section>
