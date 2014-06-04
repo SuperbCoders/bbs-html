@@ -3208,7 +3208,7 @@ h3 {
 				}
 				.title {
 					display: table-cell;
-					max-width: 460px;
+					width: 460px;
 					padding-left: 15px;
 					line-height: 1.3;
 					vertical-align: middle;
@@ -3226,7 +3226,7 @@ h3 {
 					.hint {
 						display: none;
 						height: 31px;
-						padding: 0 15px 0 5px;
+						padding: 0 20px 0 5px;
 						position: absolute;
 						top: 0;
 						left: 35px;
@@ -3396,35 +3396,39 @@ h3 {
 							background: #fa3c39;
 						}
 					}
-					.error {
-						border-color: #fa3c39;
+				}
+			}
+			.field_error {
+				.inp-wrap, .chosen, .area-wrap {
+					border-color: #fa3c39;
+					background: #fff5f5;
+					input, textarea {
+						color: #fa3c39;
 						background: #fff5f5;
-						input {
-							color: #fa3c39;
-							background: #fff5f5;
-						}
-						&:after {
-							display: block;
-							content: '';
-							width: 16px;
-							height: 16px;
-							position: absolute;
-							top: 10px;
-							right: 10px;
-							background: url(../img/sel-error.png) no-repeat 0 0;
-						}
 					}
-					.ok {
-						&:after {
-							display: block;
-							content: '';
-							width: 16px;
-							height: 16px;
-							position: absolute;
-							top: 10px;
-							right: 10px;
-							background: url(../img/sel-ok.png) no-repeat 0 0;
-						}
+					&:after {
+						display: block;
+						content: '';
+						width: 16px;
+						height: 16px;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						background: url(../img/sel-error.png) no-repeat 0 0;
+					}
+				}
+			}
+			.field_ok {
+				.inp-wrap, .chosen, .area-wrap {
+					&:after {
+						display: block;
+						content: '';
+						width: 16px;
+						height: 16px;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						background: url(../img/sel-ok.png) no-repeat 0 0;
 					}
 				}
 			}
