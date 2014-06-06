@@ -826,7 +826,7 @@ h3 {
 	top: 0;
 	left: 0;
 	background: #fff;
-	z-index: 100;
+	z-index: 999;
 	@include box-shadow(0 3px 3px 0 rgba(#000,0.1));
 	.page-header-inverse & {
 		background: #000;
