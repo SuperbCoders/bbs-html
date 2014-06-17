@@ -30,7 +30,7 @@ preferred_syntax = :scss
 module Sass::Script::Functions
   def image_url(string)
     assert_type string, :String
-    Sass::Script::String.new("../img/#{string.value}")
+    Sass::Script::String.new("url(../img/#{string.value})")
   end
   alias_method :"image-url", :image_url
   declare :"image-url", :args => [:string]
