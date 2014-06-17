@@ -28,10 +28,10 @@ relative_assets = true
 
 preferred_syntax = :scss
 module Sass::Script::Functions
-  def image_path(string)
+  def image_url(string)
     assert_type string, :String
     Sass::Script::String.new("../img/#{string.value}")
   end
-  alias_method :"image-path",:image_path 
-  declare :"image-path", :args => [:string]
+  alias_method :"image-url", :image_url
+  declare :"image-url", :args => [:string]
 end
