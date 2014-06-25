@@ -4050,10 +4050,10 @@ h3 {
 }
 
 .white-popup-block {
-  max-width: 490px;
-  margin: 40px auto;
-  position: relative;
-  background: #fff;
+	max-width: 490px;
+	margin: 40px auto;
+	position: relative;
+	background: #fff;
   	.popup-hint {
   		position: absolute;
   		top: 250px;
@@ -4177,6 +4177,68 @@ h3 {
 				border: 2px solid #fa4934;
 			}
 	  	}
+	}
+}
+
+
+#popup-auth {
+	width: 430px;
+	.row1 {
+		.row-capt {
+			margin: 0;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+	.row2 {
+		padding: 0;
+		overflow: hidden;
+		li {
+			width: 215px;
+			height: 160px;
+			float: left;
+			a {
+				display: block;
+				height: 60px;
+				padding: 50px 0;
+				&:hover {
+					background: #316d9d;
+				}
+				.icon {
+					display: block;
+					width: 60px;
+					height: 60px;
+					margin: 0 auto;
+				}
+			}
+			&.vk {
+				a {
+					.icon {
+						@include retina-sprite(login_vk);
+					}
+					&:hover {
+						.icon {
+							@include retina-sprite(login_vk_w);
+						}
+					}
+				}
+			}
+			&.fb {
+				width: 214px;
+				border-left: 1px solid #ededed;
+				a {
+					.icon {
+						@include retina-sprite(login_fb);
+					}
+					&:hover {
+						.icon {
+							@include retina-sprite(login_fb_w);
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

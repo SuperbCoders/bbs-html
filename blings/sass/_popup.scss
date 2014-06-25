@@ -308,6 +308,11 @@ button {
   &:active {
     top: 1px;
   }
+	
+	#popup-auth & {
+		right: 17px;
+		top: 17px!important;
+	}
 }
 .mfp-close-btn-in {
   .mfp-close {
