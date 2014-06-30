@@ -4050,7 +4050,7 @@ h3 {
 }
 
 .white-popup-block {
-	max-width: 490px;
+	max-width: 590px;
 	margin: 40px auto;
 	position: relative;
 	background: #fff;
@@ -4088,7 +4088,7 @@ h3 {
 	  		.arrow {
 				display: inline-block;
 				width: 32px;
-				heigght: 15px;
+				height: 15px;
 				margin: 2px 0 0 5px;
 				float: right;
 				@include retina-sprite(arr_down);
