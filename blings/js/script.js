@@ -7,6 +7,7 @@ $(function(){
 		if($('#carousel5').length){$('#carousel5').carouFredSel({auto:true,responsive:true,width:'100%',height:'verible',scroll:{items:2,duration:1000},pagination:'#pager5',items: {height:'verible',visible:{min:1,max:2}},swipe:{onMouse:true,onTouch:true}}).trigger('resize');};
 		if($('#carousel6').length){$('#carousel6').carouFredSel({auto:false,responsive:false,width:230,height:100,scroll:1,pagination:'#pager6',swipe:{onMouse:true,onTouch:true}});};
 		if($('#carousel8').length){$('#carousel8').carouFredSel({auto:false,responsive:false,width:380,height:130,scroll:1,pagination:'#pager8',swipe:{onMouse:true,onTouch:true}});};
+		if($('#carousel9').length){$('#carousel9').carouFredSel({auto:false,responsive:true,width:'100%',height:'verible',scroll:1,pagination:'#pager9',items: {width:460,height:'verible',visible:{min:1,max:2}},swipe:{onMouse:true,onTouch:true}}).trigger('resize');};
 		if($('#grid').length){$('#grid').masonry({itemSelector:'.item',isFitWidth:true});};
 	});
 	if($('.respotext').length){$('.respotext').responsiveText();};
