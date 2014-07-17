@@ -111,6 +111,7 @@ h3 {
 	}
 }
 
+
 .page-header-abs {
 	width: 100%;
 	position: absolute;
@@ -566,7 +567,53 @@ h3 {
 		}
 	}
 }
-
+#beauty{ 
+	.page-header-white{
+		background:none;
+		.frame-wrap{
+			background:none;
+			.frame{
+				.page-header-top{
+					padding-bottom:0px;
+					.logo-wrap .logo{
+						background-position: 0 -171px;
+					}
+				}
+				background:none;
+				.menu{
+					height:1px;
+					background:#b0b0b0;
+					padding:0px;
+					margin:60px 0;
+					a{
+						color:#000;
+						font-weight:bold;
+						position:relative;
+						display:inline-block;
+						background:#fff;
+						top:-5px;
+						margin:0px;
+						padding:0 20px;
+						&:hover{
+							color:#f74032;
+						}
+					}
+				}
+				.prop .col3 .offer{
+					color:#000;
+					font-weight:bold;
+					
+				}
+				.prop .col1 .back{
+					color:#b0b0b0;
+					.icon{
+						background-position: -41px -4130px;
+					}
+				}
+			}
+		}
+	}
+}
 .page-header-mid {
 	height: 35px;
 	padding: 10px 0;
@@ -5313,4 +5360,320 @@ h3 {
 			}
 		}
 	}
+}
+#beauty .calendar{
+	padding-bottom:80px;
+	h2{
+		padding-bottom:57px;
+		margin:0px;
+		font-size:36px;
+	}
+	h3{
+		padding-bottom:57px;
+		margin:0px;
+		font-size:24px;
+		text-transform:uppercase;
+		text-align:center;
+	}
+	.currDate{
+		display:inline-block;
+		font-size:11px;
+		font-weight:bold;
+		text-transform:uppercase;
+		color:#000;
+		border-bottom:1px solid #f00;
+		line-height:13px;
+		
+	}
+	.ui-datepicker-header{
+		padding-bottom:56px;
+		width:245px;
+		margin:0 auto;
+		text-align:center;
+		position:relative;
+		.ui-datepicker-title{
+			font-size:23px;
+			color:#000;
+			text-transform:uppercase;
+			font-weight:bold;
+		}
+		.ui-datepicker-prev,
+		.ui-datepicker-next{
+			position:absolute;
+			width:13px;
+			height:21px;
+			background:url(../img/calendar-cursor.png) no-repeat;
+			text-indent:9999px;
+			cursor:pointer;
+		}
+		.ui-datepicker-prev{
+			left:0px;
+			background-position:left center; 
+		}
+		.ui-datepicker-next{
+			right:0px;
+			background-position:right center; 
+		}
+		
+	}
+	.datepickerBlock{
+		position:relative;
+		margin-top:-25px;
+		.imgLoad{
+			top:20%;
+			left:-110px;
+			margin-left:50%;
+			position:absolute;
+			display:none;
+		}
+	}
+	
+	table.ui-datepicker-calendar{
+		width:100%;
+		thead tr th{
+			font-size:23px;
+			color:#c2c2c2;
+			text-transform:uppercase;
+			font-weight:bold;
+			padding-bottom:35px;
+			&.ui-datepicker-week-end{
+				color:#ff583d;
+			}
+		}
+		tbody tr td{
+			vertical-align:top;
+			font-size:23px;
+			color:#000;
+			height:110px;
+			.ui-state-default{
+				color:#000;
+			}
+			&.ui-datepicker-week-end{
+				.ui-state-default{
+					color:#ff583d;
+				}
+			}
+			.item{
+				width:80%;
+				.itemTop{
+					overflow:hidden;
+					div{
+						float:left;
+						height:4px;
+					}
+					.green{
+						width:25%;
+						background:#94db67;
+					}
+					.blue{
+						width:25%;
+						background:#6cc7eb;
+					}
+					.yell{
+						width:25%;
+						background:#f8d466;
+					}
+					.red{
+						width:25%;
+						background:#fc4e14;
+					}
+					&.greenBlock{
+						.green, .blue, .yell, .red{
+							background:#94db67;
+						}
+					}
+					&.blueBlock{
+						.green, .blue, .yell, .red{
+							background:#6cc7eb;
+						}
+					}
+					&.yellBlock{
+						.green, .blue, .yell, .red{
+							background:#f8d466;
+						}
+					}
+					&.redBlock{
+						.green, .blue, .yell, .red{
+							background:#fc4e14;
+						}
+					}	
+				}
+				span{
+					font-size:14px;
+					color:#000;
+					display:block;
+					padding-top:11px;
+					font-weight:bold;
+				}
+				
+			}
+		}
+	}
+	.info{
+		max-width:588px;
+		padding:23px 64px;
+		background:#fffedb;
+		font-size:14px;
+		text-align:center;
+		color:#000;
+		margin:60px auto;
+	}
+	.groupList{
+		text-align:center;
+		li{
+			border:solid 2px #000;
+			width:123px;
+			display:inline-block;
+			margin:0 6px 0 10px;
+			padding-top:5px;
+			font-weight:bold;
+			a{
+				display:block;
+				span{
+					
+					text-transform:uppercase;
+					display:block;
+					font-size:13px;
+					color:#202020;
+					line-height:20px;
+				}
+				strong{
+					font-size:46px;
+					color:#202020;
+					line-height:50px;
+				}
+				em{
+					display:block;
+					font-size:15px;
+					color:#202020;
+					line-height:41px;
+					
+				}
+			}
+			&.green{
+				border-color:#94db67;
+				em{
+					border-top: 2px solid #94db67;
+				}
+				&:hover{
+					background:#94db67;
+					span, strong, em {color:#fff;}
+				}
+			}
+			&.blue{
+				border-color:#6cc7eb;
+				em{
+					border-top: 2px solid #6cc7eb;
+				}
+				&:hover{
+					background:#6cc7eb;
+					span, strong, em {color:#fff;}
+				}
+				
+			}
+			&.yell{
+				border-color:#f8d466;
+				em{
+					border-top: 2px solid #f8d466;
+				}
+				&:hover{
+					background:#f8d466;
+					span, strong, em {color:#fff;}
+				}
+			}
+			&.red{
+				border-color:#fc4e14;
+				em{
+					border-top: 2px solid #fc4e14;
+				}
+				&:hover{
+					background:#fc4e14;
+					span, strong, em {color:#fff;}
+				}
+			}
+		}
+	}
+}
+.cart.registr{
+	text-align:center;
+	.cart-data .forms .row .col1{
+		width:100px;
+		margin-left:50%;
+		left:-50px;
+		background:#fff;
+		top:-10px;
+		z-index:999;
+		background:#fff;
+		label{
+			float:none;
+			padding:0px;
+			height:auto;
+		}
+		
+	}
+	.cart-data{
+		h4{
+			border-top: 1px solid #eaeaea;
+			font-size:29px;
+			padding:30px 0;
+			text-transform:uppercase;
+			position:relative;
+			margin-top:30px;
+			i{
+				background-color: #fff;
+				background-image: url("../img/sprites-s4c3b587b91.png");
+				background-position: 0 -3889px;
+				background-repeat: no-repeat;
+				display: block;
+				height: 6px;
+				left: 50%;
+				margin-left: -18px;
+				position: absolute;
+				top: -3px;
+				width: 36px;
+			}
+			span{
+				color:#f00;
+			}
+		}
+		a.btns{
+			color:#202020;
+			font-size:15px;
+			background:none;
+			border:solid 2px #000;
+			line-height:48px;
+			height:46px;
+			width:262px;
+			cursor:pointer;
+			display:block;
+			margin:0 auto;
+			font-weight:bold;
+			&:hover{
+				background:#000;
+				color:#fff;
+				
+			}
+		}
+		h3{
+			padding-bottom:30px;
+			text-transform:uppercase;
+		}
+		input[type="submit"]{
+			color:#202020;
+			font-size:15px;
+			background:none;
+			border:solid 2px #f74032;
+			height:48px;
+			width:262px;
+			cursor:pointer;
+			font-weight:bold;
+			line-height:48px;
+			&:hover{
+				background:#f74032;
+				color:#fff;
+				
+			}
+		}
+	} 
+	
 }

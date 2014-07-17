@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>Beauty-schedule</title>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="css/style.css" />
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.masonry.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.responsiveText.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.chosen.min.js"></script>
+	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+			
+			function addItem(){
+				//$("table.ui-datepicker-calendar td").find(".item").remove();
+				$("table.ui-datepicker-calendar").find("td").each(function() {
+					if($(this).hasClass("ui-datepicker-other-month")){
+						$(this).append("");
+					}else if($(this).index() == 5){
+						$(this).append('<div class="item"> \n\
+										<div class="itemTop yellBlock"> \n\
+											<div class="green"></div>\n\
+											<div class="blue"></div>\n\
+											<div class="yell"></div>\n\
+											<div class="red"></div>\n\
+										</div>\n\
+										<span>Ногти и маникюр</span>\n\
+									</div>')
+					}else if($(this).index() == 3){
+						$(this).append('<div class="item"> \n\
+										<div class="itemTop greenBlock"> \n\
+											<div class="green"></div>\n\
+											<div class="blue"></div>\n\
+											<div class="yell"></div>\n\
+											<div class="red"></div>\n\
+										</div>\n\
+										<span>Ногти и маникюр</span>\n\
+									</div>')
+					}else{
+						$(this).append('<div class="item"> \n\
+										<div class="itemTop"> \n\
+											<div class="green"></div>\n\
+											<div class="blue"></div>\n\
+											<div class="yell"></div>\n\
+											<div class="red"></div>\n\
+										</div>\n\
+										<span>Ногти и маникюр</span>\n\
+									</div>');
+					}
+					
+				});
+			}
+			function currnetMont(){
+				var currentDate = new Date
+				var monthname = new Array("Янв","Фев","Март","Апр","Май","Июнь","Июль","Авг","Сен","Окт","Ноя","Дек");
+				var monName = monthname[currentDate.getMonth()]; 
+				$(".ui-datepicker-today a").append(" "+monName)
+				$(".ui-datepicker-today a").css({"font-weight":"bold" , "font-size":"20px"});
+			}
+			
+			
+			$( "#datepicker" ).datepicker({ 
+				monthNames: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+				dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+				firstDay: 1,
+				currentText: "Now",
+				onSelect: function(dateText, inst) { 
+					setTimeout(function(){
+						addItem();
+						currnetMont();
+					}, 1);
+					
+				}
+			});
+			
+			
+			
+			
+			
+			addItem();
+			currnetMont()
+			
+			$(document).delegate(".ui-datepicker-header", "click", function() {
+				$("#datepicker").css({"opacity":0});
+				$(".datepickerBlock .imgLoad").css({"display":"block"});
+				
+				setTimeout(function(){
+					$("#datepicker").css({"opacity":1});
+					$(".datepickerBlock .imgLoad").css({"display":"none"});
+				}, 2000);
+				
+				addItem();
+				currnetMont();
+			});
+			
+			
+			
+			
+			
+		})
+    </script>
+</head>
+<body>
+
+	<div class="page" id="beauty">
+		<header class="page-header page-header-inverse mb0 page-header-white">
+			<div class="frame-wrap" >
+				<div class="frame">
+					<section class="page-header-top">
+						<div class="container">
+							<div class="prop">
+								<div class="cols">
+									<div class="col1"><a class="back hidden-tablet" href="#"><i class="icon"></i><span>Назад,<br /> в магазин</span></a></div>
+									<div class="col2">
+										<div class="label"><span>Бьюти-интенсив</span></div>
+										<div class="logo-wrap">
+											<a class="logo" href="index.html"></a>
+										</div>
+									</div>
+									<div class="col3"><a class="offer hidden-tablet" href="#">Условия и оферта</a></div>
+								</div>
+							</div>
+							<div class="menu">
+								<a href="#">Информация</a><a href="#">Программа</a><a href="#">Расписание</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</header>
+		<section class="calendar">
+        	<div class="container">
+            	<div class="row">
+                	<div class="col-sm-12">
+                    	<h2>расписание</h2>
+                        <span class="currDate">сегодня 11 июля</span>
+                        <div class="datepickerBlock">
+                        	<img src="img/loader-animation.gif"  alt="" class="imgLoad">
+                        	<div id="datepicker"></div>
+                        </div>
+                        <p class="info">Цвет на календаре соответсвует группе, которую вы должны выбрать ниже,
+а серым цветом выделены общие занятия для всех групп.</p>
+						<h3>Нажмите на группу, чтобы выбрать её</h3>
+                        <ul class="groupList">
+                        	<li class="green">
+                            	<a href="#">
+                                    <span>первая</span>
+                                    <strong>9</strong>
+                                    <span>свободных мест</span>
+                                    <em>ЗАПИСАТЬСЯ</em>
+                                </a>
+                            </li>
+                            <li class="blue">
+                            	<a href="#">
+                                    <span>вторая</span>
+                                    <strong>9</strong>
+                                    <span>свободных мест</span>
+                                    <em>ЗАПИСАТЬСЯ</em>
+                                </a>
+                            </li>
+                            <li class="yell">
+                            	<a href="#">
+                                    <span>третья</span>
+                                    <strong>9</strong>
+                                    <span>свободных мест</span>
+                                    <em>ЗАПИСАТЬСЯ</em>
+                                </a>
+                            </li>
+                            <li class="red">
+                            	<a href="#">
+                                    <span>четвертая</span>
+                                    <strong>9</strong>
+                                    <span>свободных мест</span>
+                                    <em>ЗАПИСАТЬСЯ</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<footer class="page-footer">
+			<div class="container">
+				<div class="label"></div>
+				<nav class="bm">
+					<ul>
+						<li>
+							<a href="#">Идея и история</a>
+						</li><li>
+							<a href="#">Стоимость и доставка</a>
+						</li><li>
+							<a href="#">Вакансии</a>
+						</li><li>
+						`<a href="#">Возврат и гарантия</a>
+					</li>
+					</ul>
+				</nav>
+				<div class="copyright">2014 © Bling-Blings. Все цены указаны в рублях.</div>
+				<ul class="social">
+					<li class="fb">
+						<a href="#"><i class="icon"></i></a>
+					</li><li class="vk">
+						<a href="#"><i class="icon"></i></a>
+					</li><li class="ig">
+						<a href="#"><i class="icon"></i></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

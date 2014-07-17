@@ -35,4 +35,35 @@ $(function(){
 	$('#dropdown-3 .switch a').click(function(){var a=$(this).attr('rel');$(this).parents('li').addClass('current').siblings('li').removeClass('current');$(this).parents('.dropdown').find('.tabs .tab').hide();$(this).parents('.dropdown').find('.tabs '+a).show();return false;});
 	$('.concept .contacts .addr a').click(function(){$(this).parents('li').find('.map-wrap').show();return false;});
 	$('.concept .contacts .map-wrap .btn').click(function(){$(this).parents('.map-wrap').hide();return false;});
+	
+	
+	$(".cart-data a.btns").click(function() {
+        $(this).before('<h3>Подруга %ИМЯ%</h3> \n\
+						<div class="row"> \n\
+							<div class="col1"><label>Имя</label></div> \n\
+							<div class="col2"><div class="inp-wrap"><input type="text" /></div></div> \n\
+						</div> \n\
+						<div class="row"> \n\
+							<div class="col1"><label>ФАМИЛИЯ</label></div> \n\
+							<div class="col2"> \n\
+								<div class="inp-wrap"> \n\
+									<input type="text" /> \n\
+								</div> \n\
+							</div> \n\
+						</div> \n\
+						<div class="row"> \n\
+							<div class="col1"><label>Эл. почта</label></div> \n\
+							<div class="col2">  \n\
+								<div class="inp-wrap"> \n\
+									<input type="text" /> \n\
+								</div> \n\
+							</div> \n\
+						</div>');
+		return false; 
+    });
+	
+	
 });
+
+
+
