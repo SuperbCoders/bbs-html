@@ -5402,7 +5402,7 @@ h3 {
 			position:absolute;
 			width:13px;
 			height:21px;
-			background:url(../img/calendar-cursor.png) no-repeat;
+			background: image-url('calendar-cursor.png') no-repeat;
 			text-indent:9999px;
 			cursor:pointer;
 		}
@@ -5430,7 +5430,7 @@ h3 {
 	
 	table.ui-datepicker-calendar{
 		width:100%;
-		thead tr th{
+		tr th{
 			font-size:23px;
 			color:#c2c2c2;
 			text-transform:uppercase;
@@ -5619,19 +5619,6 @@ h3 {
 			text-transform:uppercase;
 			position:relative;
 			margin-top:30px;
-			i{
-				background-color: #fff;
-				background-image: url("../img/sprites-s4c3b587b91.png");
-				background-position: 0 -3889px;
-				background-repeat: no-repeat;
-				display: block;
-				height: 6px;
-				left: 50%;
-				margin-left: -18px;
-				position: absolute;
-				top: -3px;
-				width: 36px;
-			}
 			span{
 				color:#f00;
 			}
