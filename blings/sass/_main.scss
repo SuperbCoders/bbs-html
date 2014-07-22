@@ -746,7 +746,7 @@ h3 {
 		li {
 			display: inline-block;
 			height: 35px;
-			margin: 0 20px;
+			margin: 0 15px;
 			font-size: 13px;
 			line-height: 35px;
 			@extend .bold;
@@ -759,6 +759,11 @@ h3 {
 				.page-header-inverse & {
 					color: #fff;
 				}
+			}
+			a.intensive {
+				background-color: #fa463c;
+				color: #fff;
+				padding: 2px 2px 0 2px;
 			}
 			.sub {
 				display: none;
@@ -5661,6 +5666,45 @@ h3 {
 				
 			}
 		}
-	} 
-	
+	}
+
+	.remove {
+		text-align: right;
+		margin-top: -10px;
+		margin-bottom: 10px;
+		.del {
+			display: inline-block;
+			width: 31px;
+			height: 31px;
+			position: relative;
+			vertical-align: middle;
+			background-color: #f6f6f6;
+			.hint {
+				display: none;
+				height: 31px;
+				padding: 0 20px 0 5px;
+				position: absolute;
+				top: 0;
+				left: 35px;
+				color: #000;
+				font-size: 12px;
+				line-height: 33px;
+				background: #fff;
+			}
+			.icon {
+				display: block;
+				width: 31px;
+				height: 31px;
+				@include retina-sprite(icon-del);
+			}
+			@include respond-to(large-screen) {
+				&:hover {
+					background-color: #efefef;
+					.hint {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 }
