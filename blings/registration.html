@@ -1,134 +1,173 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="utf-8" />
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<title>Beauty-registration</title>
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-	<link rel="stylesheet" href="css/style.css" />
-	<!--[if lt IE 9]>
-		<script type="text/javascript" src="js/vendor/html5shiv.js"></script>
-	<![endif]-->
-	<script type="text/javascript" src="js/vendor/jquery.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Бьюти-интенсив от Bling-Blings</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/vendor/html5shiv.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/vendor/jquery.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.migrate.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.carouFredSel.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.masonry.min.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.responsiveText.js"></script>
-	<script type="text/javascript" src="js/vendor/jquery.chosen.min.js"></script>
-	<script type="text/javascript" src="js/dropdown.js"></script>
-	<script type="text/javascript" src="js/scroll.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
-	<script type="text/javascript" src="js/map.js"></script>
-    
-    
-    
-</head>
-<body>
-	<div class="page" id="beauty">
-		<header class="page-header page-header-inverse mb0 page-header-white">
-			<div class="frame-wrap" >
-				<div class="frame">
-					<section class="page-header-top">
-						<div class="container">
-							<div class="prop">
-								<div class="cols">
-									<div class="col1"><a class="back hidden-tablet" href="#"><i class="icon"></i><span>Назад,<br /> в магазин</span></a></div>
-									<div class="col2">
-										<div class="label"><span>Бьюти-интенсив</span></div>
-										<div class="logo-wrap">
-											<a class="logo" href="index.html"></a>
-										</div>
-									</div>
-									<div class="col3"><a class="offer hidden-tablet" href="#">Условия и оферта</a></div>
-								</div>
-							</div>
-							<div class="menu">
-								<a href="#">Информация</a><a href="#">Программа</a><a href="#">Расписание</a>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</header>
-        <section class="cart registr">
-        	<section class="cart-data pb50">
-                <div class="container">
-                    <h2>Регистрация</h2>
-                    <div class="forms">
-                    	<form>
-                        	<div class="row">
-                                <div class="col1"><label>Имя</label></div>
-                                <div class="col2"><div class="inp-wrap"><input type="text" /></div></div>
-                            </div>
-                            <div class="row">
-                                <div class="col1"><label>ФАМИЛИЯ</label></div>
-                                <div class="col2">
-                                    <div class="inp-wrap">
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col1"><label>Эл. почта</label></div>
-                                <div class="col2">
-                                    <div class="inp-wrap">
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col1"><label>Подруги</label></div>
-                                <div class="col2">
-                                    <div class="chosen">
-                                        <select class="chosen-select">
-                                            <option>Я приду с падругами и получу скидку</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            
-                            <a href="#" class="btns">ДОБАВИТЬ ПОДРУГ</a>
-                        	<h4><i></i>ИТОГО <span>30 000</span> РУБЛЕЙ</h4>
-                            <input type="submit" value="ОПЛАТИТЬ И ВЫБРАТЬ ДАТУ">
-                        </form>
+    <script type="text/javascript" src="js/vendor/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.masonry.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.responsiveText.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.chosen.min.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&language=ru"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+  </head>
+  <body>
+    <div class="page" id="beauty">
+      <header class="page-header page-header-inverse mb0 page-header-white">
+        <div class="frame-wrap" >
+          <div class="frame">
+            <section class="page-header-top">
+              <div class="container">
+                <div class="prop">
+                  <div class="cols">
+                    <div class="col1"><a class="back hidden-tablet" href="#"><i class="icon"></i><span>Назад,<br /> в магазин</span></a></div>
+                    <div class="col2">
+                      <div class="label"><span>Бьюти-интенсив</span></div>
+                      <div class="logo-wrap">
+                        <a class="logo" href="index.html"></a>
+                      </div>
                     </div>
+                    <div class="col3"><a class="offer hidden-tablet" href="#">Условия и оферта</a></div>
+                  </div>
                 </div>
+                <div class="menu">
+                  <a href="#">Информация</a><a href="#">Программа</a><a href="#">Расписание</a>
+                </div>
+              </div>
             </section>
+          </div>
+        </div>
+      </header>
+      <section class="cart registr">
+        <section class="cart-data pb50">
+          <div class="container">
+            <h2>Регистрация</h2>
+            <div class="forms">
+              <form>
+                <div class="fields">
+                  <div class="row">
+                    <div class="col1"><label>Имя</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap"><input type="text" /></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>ФАМИЛИЯ</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>  
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>Эл. почта</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>Телефон</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fields">
+                  <h3>+</h3>
+                  <div class="row">
+                    <div class="col1"><label>Имя</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap"><input type="text" /></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>ФАМИЛИЯ</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>Эл. почта</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col1"><label>Телефон</label></div>
+                    <div class="col2">
+                      <div class="inp-wrap">
+                        <input type="text" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="remove">
+                    <a class="del">
+                      <i class="icon"></i><span class="hint">Удалить</span>
+                    </a>
+                  </div>
+                </div>
+                <a href="#" class="btns">ДОБАВИТЬ ПОДРУГУ</a>
+                <h4><i></i>ИТОГО <span>30 000</span> РУБЛЕЙ</h4>
+                <input type="submit" value="ОПЛАТИТЬ И ВЫБРАТЬ ДАТУ">
+              </form>
+            </div>
+          </div>
         </section>
-		<footer class="page-footer">
-			<div class="container">
-				<div class="label"></div>
-				<nav class="bm">
-					<ul>
-						<li>
-							<a href="#">Идея и история</a>
-						</li><li>
-							<a href="#">Стоимость и доставка</a>
-						</li><li>
-							<a href="#">Вакансии</a>
-						</li><li>
-						`<a href="#">Возврат и гарантия</a>
-					</li>
-					</ul>
-				</nav>
-				<div class="copyright">2014 © Bling-Blings. Все цены указаны в рублях.</div>
-				<ul class="social">
-					<li class="fb">
-						<a href="#"><i class="icon"></i></a>
-					</li><li class="vk">
-						<a href="#"><i class="icon"></i></a>
-					</li><li class="ig">
-						<a href="#"><i class="icon"></i></a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-</body>
+      </section>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="label"></div>
+          <nav class="bm">
+            <ul>
+              <li>
+                <a href="#">Идея и история</a>
+              </li>
+              <li>
+                <a href="#">Стоимость и доставка</a>
+              </li>
+              <li>
+                <a href="#">Вакансии</a>
+              </li>
+              <li>
+                `<a href="#">Возврат и гарантия</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">2014 © Bling-Blings. Все цены указаны в рублях.</div>
+          <ul class="social">
+            <li class="fb">
+              <a href="#"><i class="icon"></i></a>
+            </li>
+            <li class="vk">
+              <a href="#"><i class="icon"></i></a>
+            </li>
+            <li class="ig">
+              <a href="#"><i class="icon"></i></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
