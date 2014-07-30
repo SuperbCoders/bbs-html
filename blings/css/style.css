@@ -7872,18 +7872,18 @@ h3 {
 
 /* line 5293, ../sass/_main.scss */
 #slider9 {
-  height: 330px;
+  height: 430px;
   padding-left: 20px;
 }
 /* line 5296, ../sass/_main.scss */
 #slider9 ul {
-  height: 330px;
+  height: 430px;
   overflow: hidden;
 }
 /* line 5299, ../sass/_main.scss */
 #slider9 ul li {
   width: 460px;
-  height: 330px;
+  height: 430px;
   margin-right: 20px;
   float: left;
   position: relative;
@@ -7893,7 +7893,7 @@ h3 {
 #slider9 ul li .person {
   height: 50px;
   padding: 40px 0;
-  margin-top: 200px;
+  margin-top: 300px;
   text-align: center;
 }
 /* line 5311, ../sass/_main.scss */
@@ -7951,7 +7951,7 @@ h3 {
 }
 /* line 5343, ../sass/_main.scss */
 #slider9 ul li .msg-wrap .msg .crop {
-  max-height: 144px;
+  max-height: 244px;
   font-size: 16px;
   line-height: 24px;
   overflow: hidden;
