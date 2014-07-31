@@ -574,10 +574,7 @@ h3 {
 			background:none;
 			.frame{
 				.page-header-top{
-					padding-bottom:0px;
-					.logo-wrap .logo{
-						background-position: 0 -171px;
-					}
+					padding-bottom: 1px;
 				}
 				background:none;
 				.menu{
@@ -587,7 +584,6 @@ h3 {
 					margin:60px 0;
 					a{
 						color:#000;
-						font-weight:bold;
 						position:relative;
 						display:inline-block;
 						background:#fff;
@@ -601,13 +597,11 @@ h3 {
 				}
 				.prop .col3 .offer{
 					color:#000;
-					font-weight:bold;
-					
 				}
 				.prop .col1 .back{
 					color:#b0b0b0;
 					.icon{
-						background-position: -41px -4130px;
+						@include retina-sprite(arrow_back);
 					}
 				}
 			}
@@ -5383,7 +5377,6 @@ h3 {
 	.currDate{
 		display:inline-block;
 		font-size:11px;
-		font-weight:bold;
 		text-transform:uppercase;
 		color:#000;
 		border-bottom:1px solid #f00;
@@ -5506,9 +5499,7 @@ h3 {
 				span{
 					font-size:14px;
 					color:#000;
-					display:block;
 					padding-top:11px;
-					font-weight:bold;
 				}
 				
 			}
@@ -5529,9 +5520,8 @@ h3 {
 			border:solid 2px #000;
 			width:123px;
 			display:inline-block;
-			margin:0 6px 0 10px;
+			margin:0 6px 20px 10px;
 			padding-top:5px;
-			font-weight:bold;
 			a{
 				display:block;
 				span{
@@ -5639,7 +5629,6 @@ h3 {
 			cursor:pointer;
 			display:block;
 			margin:0 auto;
-			font-weight:bold;
 			&:hover{
 				background:#000;
 				color:#fff;
@@ -5658,7 +5647,6 @@ h3 {
 			height:48px;
 			width:262px;
 			cursor:pointer;
-			font-weight:bold;
 			line-height:48px;
 			&:hover{
 				background:#f74032;
