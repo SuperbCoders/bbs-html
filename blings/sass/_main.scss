@@ -607,6 +607,12 @@ h3 {
 			}
 		}
 	}
+	.instagram-images {
+		margin: 0 auto;
+		.instagram-images {
+			display: none;
+		}
+	}
 }
 .page-header-mid {
 	height: 35px;
@@ -5501,7 +5507,37 @@ h3 {
 					color:#000;
 					padding-top:11px;
 				}
-				
+				.single-lesson{
+					display: inline-block;
+					margin: 5px 0;
+					padding: 5px;
+					border: 2px solid #fc4e14;
+					font-size: 14px;
+					width:100px;
+					text-align: center;
+					span {
+						color: #000;
+						padding-top: 0;
+					}
+					.price {
+						display: inline-block;
+					}
+					.caption {
+						display: none;
+					}
+					&:hover{
+						background: #fc4e14;
+						span {
+							color: #fff;
+						}
+						.price {
+							display: none;
+						}
+						.caption {
+							display: inline-block;
+						}
+					}
+				}
 			}
 		}
 	}
