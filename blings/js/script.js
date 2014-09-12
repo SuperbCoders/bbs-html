@@ -35,4 +35,6 @@ $(function(){
 	$('#dropdown-3 .switch a').click(function(){var a=$(this).attr('rel');$(this).parents('li').addClass('current').siblings('li').removeClass('current');$(this).parents('.dropdown').find('.tabs .tab').hide();$(this).parents('.dropdown').find('.tabs '+a).show();return false;});
 	$('.concept .contacts .addr a').click(function(){$(this).parents('li').find('.map-wrap').show();return false;});
 	$('.concept .contacts .map-wrap .btn').click(function(){$(this).parents('.map-wrap').hide();return false;});
+	$('.safe .link').click(function(){$('#safe-hint').toggle();return false;});
+	$('#safe-hint .close').click(function(){$('#safe-hint').hide();return false;});
 });

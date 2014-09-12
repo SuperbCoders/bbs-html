@@ -3598,8 +3598,92 @@ h3 {
 			}
 		}
 	}
+	.safe-wrap {
+		padding: 20px 0 50px;
+	}
+	.safe {
+		width: 220px;
+		margin: 0 auto;
+		position: relative;
+		.icon {
+			display: block;
+			width: 165px;
+			height: 42px;
+			margin: 0 auto 10px;
+			@include retina-sprite(payment);
+		}
+		.link-wrap {
+			text-align: center;
+		}
+		.link {
+			display: inline-block;
+			color: #68696b;
+			font-size: 14px;
+			line-height: 14px;
+			text-decoration: none;
+			border-bottom: 1px dashed #bec1c4;
+		}
+		.hint {
+			display: none;
+			width: 600px;
+			margin-left: -300px;
+			position: absolute;
+			bottom: 100px;
+			left: 50%;
+			background: #fff;
+			@include box-shadow(0 0 10px rgba(#000,0.2));
+			z-index: 10;
+			&:before {
+				display: block;
+				content: '';
+				width: 20px;
+				height: 20px;
+				margin: 0 0 0 -10px;
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				background: #fff;
+				@include box-shadow(0 0 10px 0 rgba(#000,0.2));
+				@include rotate(45deg);
+			}
+			&:after {
+				display: block;
+				content: '';
+				width: 100%;
+				height: 20px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: #fff;
+			}
+			.hint-cnt {
+				padding: 30px;
+				position: relative;
+			}
+			h3 {
+				margin-bottom: 10px;
+				color : #202020;
+				font-size : 12px;
+				font-weight: bold;
+				text-transform : uppercase;
+			}
+			.text p {
+				margin-bottom: 0;
+				font-size: 14px;
+				line-height: 23.6px;
+			}
+			.close {
+				display: block;
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				top: 15px;
+				right: 20px;
+				@include retina-sprite(btn_close);
+			}
+		}
+	}
 }
-
 
 .switcher {
 	margin: 0 auto 10px;
@@ -4843,8 +4927,8 @@ h3 {
 
 #beauty {
 	h2 {
-		margin-top: 20px;
-		margin-bottom: 30px;
+		margin-top: 5px;
+		margin-bottom: 10px;
 		padding: 0 15px;
 		font-size: 24px;
 		text-transform: uppercase;
@@ -4881,6 +4965,9 @@ h3 {
 				padding: 0 15px;
 				font-size: 34px;
 				line-height: 1.5;
+				@include respond-to(medium-screen) {
+					font-size: 26px;
+				}
 			}
 			.cost {
 				font-size: 11px;
@@ -4924,12 +5011,24 @@ h3 {
 		table {
 			width: 100%;
 		}
+		.ln {
+			height: 1px;
+			font-size: 0;
+			border-bottom: 1px solid rgba(#fff,0.7);
+		}
 		a {
 			margin: 0 20px;
 			color: #fff;
 			font-size: 12px;
 			text-transform: uppercase;
 			text-decoration: none;
+			&:hover {
+				color: rgba(#fff,0.5);
+			}
+		}
+		@include respond-to(medium-screen) {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 	.terms {
@@ -5245,7 +5344,7 @@ h3 {
 			display: inline-block;
 			width: 300px;
 			margin-right: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 			vertical-align: top;
 			text-align: left;
 			figure {
@@ -5282,7 +5381,65 @@ h3 {
 					}
 				}
 			}
+			.person {
+					padding-bottom: 36px;
+					position: relative;
+				.name {
+					margin-bottom: 5px;
+					color: #000;
+					font-size: 22px;
+				}
+				.status {
+					color: #fa4934;
+					font-size: 18px;
+				}
+				&:after {
+					display: block;
+					content: '';
+					width: 42px;
+					height: 2px;
+					position: absolute;
+					bottom: 18px;
+					left: 0;
+					font-size: 0;
+					background: #fa4934;
+				}
+			}
+			.social {
+				height: 25px;
+				overflow: hidden;
+				li {
+					height: 18px;
+					margin-right: 18px;
+					float: left;
+					a {
+						display: block;
+					}
+					&.vk {
+						.icon {
+							width: 12px;
+							height: 14px;
+							margin-top: 4px;
+							@include retina-sprite(vk_bw);
+							&:hover {
+								@include retina-sprite(vk_c);
+							}
+						}
+					}
+					&.fb {
+						.icon {
+							width: 9px;
+							height: 18px;
+							@include retina-sprite(fb_bw);
+							&:hover {
+								@include retina-sprite(fb_c);
+							}
+						}
+					}
+				}
+			}
 			.descript {
+				margin-bottom: 15px;
 				font-size: 16px;
 				line-height: 1.4;
 			}
@@ -5502,10 +5659,13 @@ h3 {
 						}
 					}	
 				}
-				span{
-					font-size:14px;
-					color:#000;
-					padding-top:11px;
+				span {
+					display: block;
+					color: #000;
+					font-size: 14px;
+					line-height: 16px;
+					padding-top: 5px;
+					margin-bottom: 3px;
 				}
 				.single-lesson{
 					display: inline-block;
@@ -5521,9 +5681,15 @@ h3 {
 					}
 					.price {
 						display: inline-block;
+						padding: 0;
+						margin: 0;
+						line-height: 1;
 					}
 					.caption {
 						display: none;
+						padding: 0;
+						margin: 0;
+						line-height: 1;
 					}
 					&:hover{
 						background: #fc4e14;
