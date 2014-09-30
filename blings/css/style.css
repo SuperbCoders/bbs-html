@@ -74,7 +74,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 1, ../sass/_main.scss */
-.regular, body, input, select, textarea, button, .page-header-mid .tm li .sub .sub-cnt .columns li, .cart .cart-order table td .sale .hint {
+.regular, body, input, select, textarea, button, .page-header-mid .tm li .sub .sub-cnt .columns li, .cart .cart-order table td .sale .hint, #beauty .calendar .ui-datepicker-switch li a, #beauty .calendar table.ui-datepicker-calendar tbody td .more-lesson, #beauty .calendar table.ui-datepicker-calendar tbody td .item .ttl, #beauty .calendar .info {
   font-family: 'Circe-Regular', Arial, Helvetica, serif;
 }
 
@@ -8275,72 +8275,120 @@ h3 {
 
 /* line 5526, ../sass/_main.scss */
 #beauty .calendar {
+  padding-top: 30px;
   padding-bottom: 80px;
 }
-/* line 5528, ../sass/_main.scss */
+/* line 5529, ../sass/_main.scss */
 #beauty .calendar h2 {
   padding-bottom: 57px;
   margin: 0px;
   font-size: 36px;
 }
-/* line 5533, ../sass/_main.scss */
+/* line 5534, ../sass/_main.scss */
 #beauty .calendar h3 {
-  padding-bottom: 57px;
+  padding-bottom: 33px;
   margin: 0px;
   font-size: 24px;
   text-transform: uppercase;
   text-align: center;
 }
-/* line 5540, ../sass/_main.scss */
+/* line 5541, ../sass/_main.scss */
 #beauty .calendar .currDate {
   display: inline-block;
   font-size: 11px;
   text-transform: uppercase;
-  color: #000;
-  border-bottom: 1px solid #f00;
+  color: #b3b7bd;
   line-height: 13px;
 }
-/* line 5549, ../sass/_main.scss */
-#beauty .calendar .ui-datepicker-header {
-  padding-bottom: 56px;
-  width: 245px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-/* line 5555, ../sass/_main.scss */
-#beauty .calendar .ui-datepicker-header .ui-datepicker-title {
-  font-size: 23px;
+/* line 5547, ../sass/_main.scss */
+#beauty .calendar .currDate b {
   color: #000;
+}
+/* line 5552, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-header {
+  padding-bottom: 30px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 23px;
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 5562, ../sass/_main.scss */
+/* line 5560, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-header .ui-datepicker-title {
+  color: #000;
+  text-align: center;
+}
+/* line 5565, ../sass/_main.scss */
 #beauty .calendar .ui-datepicker-header .ui-datepicker-prev,
 #beauty .calendar .ui-datepicker-header .ui-datepicker-next {
+  display: inline-block;
+  width: 200px;
   position: absolute;
-  width: 13px;
-  height: 21px;
-  background: url(../img/calendar-cursor.png) no-repeat;
-  text-indent: 9999px;
+  top: 0;
+  color: #b3b7bd;
   cursor: pointer;
 }
-/* line 5570, ../sass/_main.scss */
+/* line 5573, ../sass/_main.scss */
 #beauty .calendar .ui-datepicker-header .ui-datepicker-prev {
-  left: 0px;
-  background-position: left center;
+  left: -200px;
+  text-align: right;
 }
-/* line 5574, ../sass/_main.scss */
+/* line 5577, ../sass/_main.scss */
 #beauty .calendar .ui-datepicker-header .ui-datepicker-next {
-  right: 0px;
-  background-position: right center;
+  right: -200px;
 }
 /* line 5580, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-header .bullet {
+  display: inline-block;
+  margin-top: -2px;
+  color: #ff583d;
+  font-size: 14px;
+  vertical-align: top;
+  line-height: 1px;
+}
+/* line 5589, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch {
+  height: 36px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+/* line 5593, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch li {
+  display: inline-block;
+  height: 36px;
+}
+/* line 5596, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch li a {
+  display: inline-block;
+  height: 34px;
+  padding: 0 20px;
+  color: #b3b7bd;
+  font-size: 14px;
+  line-height: 34px;
+  border: 1px solid #bdc5d1;
+}
+/* line 5607, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch li:first-child a {
+  border-right: 0;
+}
+/* line 5612, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch li:last-child a {
+  border-left: 0;
+}
+/* line 5617, ../sass/_main.scss */
+#beauty .calendar .ui-datepicker-switch li.current a {
+  color: #fff;
+  border-color: #ff583d;
+  background: #ff583d;
+}
+/* line 5626, ../sass/_main.scss */
 #beauty .calendar .datepickerBlock {
   position: relative;
   margin-top: -25px;
+  margin-bottom: 25px;
 }
-/* line 5583, ../sass/_main.scss */
+/* line 5630, ../sass/_main.scss */
 #beauty .calendar .datepickerBlock .imgLoad {
   top: 20%;
   left: -110px;
@@ -8348,11 +8396,11 @@ h3 {
   position: absolute;
   display: none;
 }
-/* line 5592, ../sass/_main.scss */
+/* line 5639, ../sass/_main.scss */
 #beauty .calendar table.ui-datepicker-calendar {
   width: 100%;
 }
-/* line 5594, ../sass/_main.scss */
+/* line 5641, ../sass/_main.scss */
 #beauty .calendar table.ui-datepicker-calendar tr th {
   font-size: 23px;
   color: #c2c2c2;
@@ -8360,155 +8408,211 @@ h3 {
   font-weight: bold;
   padding-bottom: 35px;
 }
-/* line 5600, ../sass/_main.scss */
+/* line 5647, ../sass/_main.scss */
 #beauty .calendar table.ui-datepicker-calendar tr th.ui-datepicker-week-end {
   color: #ff583d;
 }
-/* line 5604, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td {
+/* line 5651, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td {
   vertical-align: top;
-  font-size: 23px;
-  color: #000;
-  height: 110px;
-}
-/* line 5609, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .ui-state-default {
   color: #000;
 }
-/* line 5613, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td.ui-datepicker-week-end .ui-state-default {
-  color: #ff583d;
+/* line 5654, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover {
+  min-height: 100px;
+  padding: 8px 0;
+  border: 2px solid #fff;
 }
-/* line 5617, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item {
-  width: 80%;
-}
-/* line 5619, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop {
-  overflow: hidden;
-}
-/* line 5621, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop div {
-  float: left;
-  height: 4px;
-}
-/* line 5625, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop .green {
-  width: 25%;
-  background: #94db67;
-}
-/* line 5629, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop .blue {
-  width: 25%;
-  background: #6cc7eb;
-}
-/* line 5633, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop .yell {
-  width: 25%;
-  background: #f8d466;
-}
-/* line 5637, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop .red {
-  width: 25%;
-  background: #fc4e14;
-}
-/* line 5642, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.greenBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.greenBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.greenBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.greenBlock .red {
-  background: #94db67;
-}
-/* line 5647, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.blueBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.blueBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.blueBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.blueBlock .red {
-  background: #6cc7eb;
-}
-/* line 5652, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.yellBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.yellBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.yellBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.yellBlock .red {
-  background: #f8d466;
-}
-/* line 5657, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.redBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.redBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.redBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody tr td .item .itemTop.redBlock .red {
-  background: #fc4e14;
+/* line 5658, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover:hover {
+  border-color: #f5f5f5;
 }
 /* line 5662, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item span {
-  display: block;
-  color: #000;
-  font-size: 14px;
-  line-height: 16px;
-  padding-top: 5px;
-  margin-bottom: 3px;
+#beauty .calendar table.ui-datepicker-calendar tbody td .crop {
+  height: 100px;
+  position: relative;
+  overflow: hidden;
 }
-/* line 5670, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson {
-  display: inline-block;
-  margin: 5px 0;
-  padding: 5px;
-  border: 2px solid #fc4e14;
+/* line 5666, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .crop:after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, #ffffff 100%);
+}
+/* line 5677, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .more-lesson {
+  display: block;
+  height: 35px;
+  border: 2px solid #596073;
+  color: #596073;
   font-size: 14px;
-  width: 100px;
+  line-height: 37px;
   text-align: center;
 }
-/* line 5678, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson span {
-  color: #000;
-  padding-top: 0;
+/* line 5686, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .more-lesson:hover {
+  color: #fff;
+  background: #596073;
 }
-/* line 5682, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson .price {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-}
-/* line 5688, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson .caption {
-  display: none;
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-}
-/* line 5694, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson:hover {
-  background: #fc4e14;
+/* line 5691, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover-show {
+  width: 142px;
+  position: absolute;
+  border: 2px solid #f5f5f5;
+  background: #fff;
 }
 /* line 5696, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson:hover span {
-  color: #fff;
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover-show .crop {
+  height: auto;
 }
-/* line 5699, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson:hover .price {
+/* line 5698, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover-show .crop:after {
   display: none;
 }
 /* line 5702, ../sass/_main.scss */
-#beauty .calendar table.ui-datepicker-calendar tbody tr td .item .single-lesson:hover .caption {
-  display: inline-block;
+#beauty .calendar table.ui-datepicker-calendar tbody td .cover-show .more-lesson {
+  display: none;
 }
-/* line 5710, ../sass/_main.scss */
+/* line 5706, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .ui-state-default {
+  display: block;
+  padding: 5px 18px;
+  color: #000;
+  font-size: 16px;
+}
+/* line 5713, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td.ui-datepicker-week-end .ui-state-default {
+  color: #ff583d;
+}
+/* line 5718, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td.ui-datepicker-empty .ui-state-default {
+  color: #c2c2c2;
+}
+/* line 5722, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop {
+  padding: 0 8px;
+  overflow: hidden;
+}
+/* line 5725, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop div {
+  float: left;
+  height: 4px;
+}
+/* line 5729, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop .green {
+  width: 25%;
+  background: #94db67;
+}
+/* line 5733, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop .blue {
+  width: 25%;
+  background: #6cc7eb;
+}
+/* line 5737, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop .yell {
+  width: 25%;
+  background: #f8d466;
+}
+/* line 5741, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop .red {
+  width: 25%;
+  background: #fc4e14;
+}
+/* line 5746, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.greenBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.greenBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.greenBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.greenBlock .red {
+  background: #94db67;
+}
+/* line 5751, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.blueBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.blueBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.blueBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.blueBlock .red {
+  background: #6cc7eb;
+}
+/* line 5756, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.yellBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.yellBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.yellBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.yellBlock .red {
+  background: #f8d466;
+}
+/* line 5761, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.redBlock .green, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.redBlock .blue, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.redBlock .yell, #beauty .calendar table.ui-datepicker-calendar tbody td .itemTop.redBlock .red {
+  background: #fc4e14;
+}
+/* line 5766, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item {
+  padding: 5px 18px;
+  font-size: 14px;
+  line-height: 16px;
+}
+/* line 5770, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .time {
+  margin-bottom: 3px;
+}
+/* line 5773, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .ttl {
+  margin-bottom: 8px;
+}
+/* line 5777, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .single-lesson {
+  display: block;
+  height: 35px;
+  margin: 0 -18px;
+  border: 2px solid #fc4e14;
+  font-size: 14px;
+  line-height: 37px;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 5786, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .single-lesson .price {
+  display: block;
+  height: 35px;
+  color: #fc4e14;
+}
+/* line 5791, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .single-lesson .capt {
+  display: none;
+  height: 35px;
+  color: #fff;
+  background: #fc4e14;
+}
+/* line 5798, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .single-lesson:hover .price {
+  display: none;
+}
+/* line 5801, ../sass/_main.scss */
+#beauty .calendar table.ui-datepicker-calendar tbody td .item .single-lesson:hover .capt {
+  display: block;
+}
+/* line 5809, ../sass/_main.scss */
 #beauty .calendar .info {
-  max-width: 588px;
-  padding: 23px 64px;
+  width: 500px;
+  padding: 20px 45px;
   background: #fffedb;
   font-size: 14px;
+  line-height: 1.5;
   text-align: center;
   color: #000;
-  margin: 60px auto;
+  margin: 20px auto;
 }
-/* line 5719, ../sass/_main.scss */
+/* line 5820, ../sass/_main.scss */
 #beauty .calendar .groupList {
   text-align: center;
 }
-/* line 5721, ../sass/_main.scss */
+/* line 5822, ../sass/_main.scss */
 #beauty .calendar .groupList li {
   border: solid 2px #000;
   width: 123px;
   display: inline-block;
-  margin: 0 6px 20px 10px;
-  padding-top: 5px;
+  margin: 0 23px 20px 23px;
 }
-/* line 5727, ../sass/_main.scss */
+/* line 5827, ../sass/_main.scss */
 #beauty .calendar .groupList li a {
   display: block;
+  padding-bottom: 5px;
 }
-/* line 5729, ../sass/_main.scss */
+/* line 5830, ../sass/_main.scss */
 #beauty .calendar .groupList li a span {
   text-transform: uppercase;
   display: block;
@@ -8516,89 +8620,90 @@ h3 {
   color: #202020;
   line-height: 20px;
 }
-/* line 5737, ../sass/_main.scss */
+/* line 5838, ../sass/_main.scss */
 #beauty .calendar .groupList li a strong {
   font-size: 46px;
   color: #202020;
   line-height: 50px;
 }
-/* line 5742, ../sass/_main.scss */
+/* line 5843, ../sass/_main.scss */
 #beauty .calendar .groupList li a em {
   display: block;
+  margin-bottom: 5px;
   font-size: 15px;
   color: #202020;
-  line-height: 41px;
+  line-height: 40px;
 }
-/* line 5750, ../sass/_main.scss */
+/* line 5852, ../sass/_main.scss */
 #beauty .calendar .groupList li.green {
   border-color: #94db67;
 }
-/* line 5752, ../sass/_main.scss */
+/* line 5854, ../sass/_main.scss */
 #beauty .calendar .groupList li.green em {
-  border-top: 2px solid #94db67;
+  border-bottom: 2px solid #94db67;
 }
-/* line 5755, ../sass/_main.scss */
+/* line 5857, ../sass/_main.scss */
 #beauty .calendar .groupList li.green:hover {
   background: #94db67;
 }
-/* line 5757, ../sass/_main.scss */
+/* line 5859, ../sass/_main.scss */
 #beauty .calendar .groupList li.green:hover span, #beauty .calendar .groupList li.green:hover strong, #beauty .calendar .groupList li.green:hover em {
   color: #fff;
 }
-/* line 5760, ../sass/_main.scss */
+/* line 5862, ../sass/_main.scss */
 #beauty .calendar .groupList li.blue {
   border-color: #6cc7eb;
 }
-/* line 5762, ../sass/_main.scss */
+/* line 5864, ../sass/_main.scss */
 #beauty .calendar .groupList li.blue em {
-  border-top: 2px solid #6cc7eb;
+  border-bottom: 2px solid #6cc7eb;
 }
-/* line 5765, ../sass/_main.scss */
+/* line 5867, ../sass/_main.scss */
 #beauty .calendar .groupList li.blue:hover {
   background: #6cc7eb;
 }
-/* line 5767, ../sass/_main.scss */
+/* line 5869, ../sass/_main.scss */
 #beauty .calendar .groupList li.blue:hover span, #beauty .calendar .groupList li.blue:hover strong, #beauty .calendar .groupList li.blue:hover em {
   color: #fff;
 }
-/* line 5771, ../sass/_main.scss */
+/* line 5873, ../sass/_main.scss */
 #beauty .calendar .groupList li.yell {
   border-color: #f8d466;
 }
-/* line 5773, ../sass/_main.scss */
+/* line 5875, ../sass/_main.scss */
 #beauty .calendar .groupList li.yell em {
-  border-top: 2px solid #f8d466;
+  border-bottom: 2px solid #f8d466;
 }
-/* line 5776, ../sass/_main.scss */
+/* line 5878, ../sass/_main.scss */
 #beauty .calendar .groupList li.yell:hover {
   background: #f8d466;
 }
-/* line 5778, ../sass/_main.scss */
+/* line 5880, ../sass/_main.scss */
 #beauty .calendar .groupList li.yell:hover span, #beauty .calendar .groupList li.yell:hover strong, #beauty .calendar .groupList li.yell:hover em {
   color: #fff;
 }
-/* line 5781, ../sass/_main.scss */
+/* line 5883, ../sass/_main.scss */
 #beauty .calendar .groupList li.red {
   border-color: #fc4e14;
 }
-/* line 5783, ../sass/_main.scss */
+/* line 5885, ../sass/_main.scss */
 #beauty .calendar .groupList li.red em {
-  border-top: 2px solid #fc4e14;
+  border-bottom: 2px solid #fc4e14;
 }
-/* line 5786, ../sass/_main.scss */
+/* line 5888, ../sass/_main.scss */
 #beauty .calendar .groupList li.red:hover {
   background: #fc4e14;
 }
-/* line 5788, ../sass/_main.scss */
+/* line 5890, ../sass/_main.scss */
 #beauty .calendar .groupList li.red:hover span, #beauty .calendar .groupList li.red:hover strong, #beauty .calendar .groupList li.red:hover em {
   color: #fff;
 }
 
-/* line 5794, ../sass/_main.scss */
+/* line 5896, ../sass/_main.scss */
 .cart.registr {
   text-align: center;
 }
-/* line 5796, ../sass/_main.scss */
+/* line 5898, ../sass/_main.scss */
 .cart.registr .cart-data .forms .row .col1 {
   width: 100px;
   margin-left: 50%;
@@ -8608,13 +8713,13 @@ h3 {
   z-index: 999;
   background: #fff;
 }
-/* line 5804, ../sass/_main.scss */
+/* line 5906, ../sass/_main.scss */
 .cart.registr .cart-data .forms .row .col1 label {
   float: none;
   padding: 0px;
   height: auto;
 }
-/* line 5812, ../sass/_main.scss */
+/* line 5914, ../sass/_main.scss */
 .cart.registr .cart-data h4 {
   border-top: 1px solid #eaeaea;
   font-size: 29px;
@@ -8623,11 +8728,11 @@ h3 {
   position: relative;
   margin-top: 30px;
 }
-/* line 5819, ../sass/_main.scss */
+/* line 5921, ../sass/_main.scss */
 .cart.registr .cart-data h4 span {
   color: #f00;
 }
-/* line 5823, ../sass/_main.scss */
+/* line 5925, ../sass/_main.scss */
 .cart.registr .cart-data a.btns {
   color: #202020;
   font-size: 15px;
@@ -8640,17 +8745,17 @@ h3 {
   display: block;
   margin: 0 auto;
 }
-/* line 5834, ../sass/_main.scss */
+/* line 5936, ../sass/_main.scss */
 .cart.registr .cart-data a.btns:hover {
   background: #000;
   color: #fff;
 }
-/* line 5840, ../sass/_main.scss */
+/* line 5942, ../sass/_main.scss */
 .cart.registr .cart-data h3 {
   padding-bottom: 30px;
   text-transform: uppercase;
 }
-/* line 5844, ../sass/_main.scss */
+/* line 5946, ../sass/_main.scss */
 .cart.registr .cart-data input[type="submit"] {
   color: #202020;
   font-size: 15px;
@@ -8661,18 +8766,18 @@ h3 {
   cursor: pointer;
   line-height: 48px;
 }
-/* line 5853, ../sass/_main.scss */
+/* line 5955, ../sass/_main.scss */
 .cart.registr .cart-data input[type="submit"]:hover {
   background: #f74032;
   color: #fff;
 }
-/* line 5861, ../sass/_main.scss */
+/* line 5963, ../sass/_main.scss */
 .cart.registr .remove {
   text-align: right;
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 5865, ../sass/_main.scss */
+/* line 5967, ../sass/_main.scss */
 .cart.registr .remove .del {
   display: inline-block;
   width: 31px;
@@ -8681,7 +8786,7 @@ h3 {
   vertical-align: middle;
   background-color: #f6f6f6;
 }
-/* line 5872, ../sass/_main.scss */
+/* line 5974, ../sass/_main.scss */
 .cart.registr .remove .del .hint {
   display: none;
   height: 31px;
@@ -8694,7 +8799,7 @@ h3 {
   line-height: 33px;
   background: #fff;
 }
-/* line 5884, ../sass/_main.scss */
+/* line 5986, ../sass/_main.scss */
 .cart.registr .remove .del .icon {
   display: block;
   width: 31px;
@@ -8717,11 +8822,11 @@ h3 {
   }
 }
 @media only screen and (min-width: 980px) {
-  /* line 5891, ../sass/_main.scss */
+  /* line 5993, ../sass/_main.scss */
   .cart.registr .remove .del:hover {
     background-color: #efefef;
   }
-  /* line 5893, ../sass/_main.scss */
+  /* line 5995, ../sass/_main.scss */
   .cart.registr .remove .del:hover .hint {
     display: block;
   }

@@ -37,4 +37,6 @@ $(function(){
 	$('.concept .contacts .map-wrap .btn').click(function(){$(this).parents('.map-wrap').hide();return false;});
 	$('.safe .link').click(function(){$('#safe-hint').toggle();return false;});
 	$('#safe-hint .close').click(function(){$('#safe-hint').hide();return false;});
+	$('.more-lesson').click(function(){$(this).parents('.cover').addClass('cover-show');return false;});
+	$('.ui-datepicker-calendar .ui-state-default').click(function(){$('.cover').removeClass('cover-show');return false;});
 });

@@ -5524,6 +5524,7 @@ h3 {
 	}
 }
 #beauty .calendar{
+	padding-top: 30px;
 	padding-bottom:80px;
 	h2{
 		padding-bottom:57px;
@@ -5531,7 +5532,7 @@ h3 {
 		font-size:36px;
 	}
 	h3{
-		padding-bottom:57px;
+		padding-bottom:33px;
 		margin:0px;
 		font-size:24px;
 		text-transform:uppercase;
@@ -5541,45 +5542,91 @@ h3 {
 		display:inline-block;
 		font-size:11px;
 		text-transform:uppercase;
-		color:#000;
-		border-bottom:1px solid #f00;
+		color:#b3b7bd;
 		line-height:13px;
+		b {
+			color: #000;
+		}
 		
 	}
 	.ui-datepicker-header{
-		padding-bottom:56px;
-		width:245px;
+		padding-bottom:30px;
+		width: 300px;
 		margin:0 auto;
-		text-align:center;
 		position:relative;
+		font-size:23px;
+		text-transform:uppercase;
+		font-weight:bold;
 		.ui-datepicker-title{
-			font-size:23px;
 			color:#000;
-			text-transform:uppercase;
-			font-weight:bold;
+			text-align:center;
 		}
 		.ui-datepicker-prev,
-		.ui-datepicker-next{
+		.ui-datepicker-next {
+			display: inline-block;
+			width: 200px;
 			position:absolute;
-			width:13px;
-			height:21px;
-			background: image-url('calendar-cursor.png') no-repeat;
-			text-indent:9999px;
+			top: 0;
+			color: #b3b7bd;
 			cursor:pointer;
 		}
 		.ui-datepicker-prev{
-			left:0px;
-			background-position:left center; 
+			left: -200px;
+			text-align: right;
 		}
 		.ui-datepicker-next{
-			right:0px;
-			background-position:right center; 
+			right: -200px;
 		}
-		
+		.bullet {
+			display: inline-block;
+			margin-top: -2px;
+			color: #ff583d;
+			font-size: 14px;
+			vertical-align: top;
+			line-height: 1px;
+		}
 	}
+	.ui-datepicker-switch {
+		height: 36px;
+		margin-bottom: 50px;
+		text-align: center;
+		li {
+			display: inline-block;
+			height: 36px;
+			a {
+				display: inline-block;
+				height: 34px;
+				padding: 0 20px;
+				color: #b3b7bd;
+				font-size: 14px;
+				@extend .regular;
+				line-height: 34px;
+				border: 1px solid #bdc5d1;
+			}
+			&:first-child {
+				a {
+					border-right: 0;
+				}
+			}
+			&:last-child {
+				a {
+					border-left: 0;
+				}
+			}
+			&.current {
+				a {
+					color: #fff;
+					border-color: #ff583d;
+					background: #ff583d;
+				}
+			}
+		}
+	}
+
 	.datepickerBlock{
 		position:relative;
 		margin-top:-25px;
+		margin-bottom: 25px;
 		.imgLoad{
 			top:20%;
 			left:-110px;
@@ -5591,7 +5638,7 @@ h3 {
 	
 	table.ui-datepicker-calendar{
 		width:100%;
-		tr th{
+		tr th {
 			font-size:23px;
 			color:#c2c2c2;
 			text-transform:uppercase;
@@ -5601,106 +5648,158 @@ h3 {
 				color:#ff583d;
 			}
 		}
-		tbody tr td{
-			vertical-align:top;
-			font-size:23px;
-			color:#000;
-			height:110px;
+		tbody td {
+			vertical-align: top;
+			color: #000;
+			.cover {
+				min-height: 100px;
+				padding: 8px 0;
+				border: 2px solid #fff;
+				&:hover {
+					border-color: #f5f5f5;
+				}
+			}
+			.crop {
+				height: 100px;
+				position: relative;
+				overflow: hidden;
+				&:after {
+					display: block;
+					content: '';
+					width: 100%;
+					height: 20px;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					background: linear-gradient(to bottom, rgba(#fff,0.6) 0,rgba(#fff,1) 100%);
+				}
+			}
+			.more-lesson {
+				display: block;
+				height: 35px;
+				border: 2px solid #596073;
+				color: #596073;
+				font-size: 14px;
+				@extend .regular;
+				line-height: 37px;
+				text-align: center;
+				&:hover{
+					color: #fff;
+					background: #596073;
+				}
+			}
+			.cover-show {
+				width: 142px;
+				position: absolute;
+				border: 2px solid #f5f5f5;
+				background: #fff;
+				.crop {
+					height: auto;
+					&:after {
+						display: none;
+					}
+				}
+				.more-lesson {
+					display: none;
+				}
+			}
 			.ui-state-default{
-				color:#000;
+				display: block;
+				padding: 5px 18px;
+				color: #000;
+				font-size: 16px;
 			}
 			&.ui-datepicker-week-end{
 				.ui-state-default{
 					color:#ff583d;
 				}
 			}
-			.item{
-				width:80%;
-				.itemTop{
-					overflow:hidden;
-					div{
-						float:left;
-						height:4px;
-					}
-					.green{
-						width:25%;
+			&.ui-datepicker-empty {
+				.ui-state-default{
+					color: #c2c2c2;
+				}
+			}
+			.itemTop{
+				padding: 0 8px;
+				overflow:hidden;
+				div{
+					float:left;
+					height:4px;
+				}
+				.green{
+					width:25%;
+					background:#94db67;
+				}
+				.blue{
+					width:25%;
+					background:#6cc7eb;
+				}
+				.yell{
+					width:25%;
+					background:#f8d466;
+				}
+				.red{
+					width:25%;
+					background:#fc4e14;
+				}
+				&.greenBlock{
+					.green, .blue, .yell, .red{
 						background:#94db67;
 					}
-					.blue{
-						width:25%;
+				}
+				&.blueBlock{
+					.green, .blue, .yell, .red{
 						background:#6cc7eb;
 					}
-					.yell{
-						width:25%;
+				}
+				&.yellBlock{
+					.green, .blue, .yell, .red{
 						background:#f8d466;
 					}
-					.red{
-						width:25%;
+				}
+				&.redBlock{
+					.green, .blue, .yell, .red{
 						background:#fc4e14;
 					}
-					&.greenBlock{
-						.green, .blue, .yell, .red{
-							background:#94db67;
-						}
-					}
-					&.blueBlock{
-						.green, .blue, .yell, .red{
-							background:#6cc7eb;
-						}
-					}
-					&.yellBlock{
-						.green, .blue, .yell, .red{
-							background:#f8d466;
-						}
-					}
-					&.redBlock{
-						.green, .blue, .yell, .red{
-							background:#fc4e14;
-						}
-					}	
-				}
-				span {
-					display: block;
-					color: #000;
-					font-size: 14px;
-					line-height: 16px;
-					padding-top: 5px;
+				}	
+			}
+			.item {
+				padding: 5px 18px;
+				font-size: 14px;
+				line-height: 16px;
+				.time {
 					margin-bottom: 3px;
 				}
+				.ttl {
+					margin-bottom: 8px;
+					@extend .regular;
+				}
 				.single-lesson{
-					display: inline-block;
-					margin: 5px 0;
-					padding: 5px;
+					display: block;
+					height: 35px;
+					margin: 0 -18px;
 					border: 2px solid #fc4e14;
 					font-size: 14px;
-					width:100px;
+					line-height: 37px;
 					text-align: center;
-					span {
-						color: #000;
-						padding-top: 0;
-					}
+					text-transform: uppercase;
 					.price {
-						display: inline-block;
-						padding: 0;
-						margin: 0;
-						line-height: 1;
+						display: block;
+						height: 35px;
+						color: #fc4e14;
 					}
-					.caption {
+					.capt {
 						display: none;
-						padding: 0;
-						margin: 0;
-						line-height: 1;
+						height: 35px;
+						color: #fff;
+						background: #fc4e14;
 					}
 					&:hover{
-						background: #fc4e14;
-						span {
-							color: #fff;
-						}
 						.price {
 							display: none;
 						}
-						.caption {
-							display: inline-block;
+						.capt {
+							display: block;
 						}
 					}
 				}
@@ -5708,13 +5807,15 @@ h3 {
 		}
 	}
 	.info{
-		max-width:588px;
-		padding:23px 64px;
+		width: 500px;
+		padding: 20px 45px;
 		background:#fffedb;
 		font-size:14px;
+		line-height: 1.5;
 		text-align:center;
 		color:#000;
-		margin:60px auto;
+		@extend .regular;
+		margin: 20px auto;
 	}
 	.groupList{
 		text-align:center;
@@ -5722,10 +5823,10 @@ h3 {
 			border:solid 2px #000;
 			width:123px;
 			display:inline-block;
-			margin:0 6px 20px 10px;
-			padding-top:5px;
+			margin:0 23px 20px 23px;
 			a{
 				display:block;
+				padding-bottom: 5px;
 				span{
 					
 					text-transform:uppercase;
@@ -5741,16 +5842,17 @@ h3 {
 				}
 				em{
 					display:block;
+					margin-bottom: 5px;
 					font-size:15px;
 					color:#202020;
-					line-height:41px;
+					line-height:40px;
 					
 				}
 			}
 			&.green{
 				border-color:#94db67;
 				em{
-					border-top: 2px solid #94db67;
+					border-bottom: 2px solid #94db67;
 				}
 				&:hover{
 					background:#94db67;
@@ -5760,7 +5862,7 @@ h3 {
 			&.blue{
 				border-color:#6cc7eb;
 				em{
-					border-top: 2px solid #6cc7eb;
+					border-bottom: 2px solid #6cc7eb;
 				}
 				&:hover{
 					background:#6cc7eb;
@@ -5771,7 +5873,7 @@ h3 {
 			&.yell{
 				border-color:#f8d466;
 				em{
-					border-top: 2px solid #f8d466;
+					border-bottom: 2px solid #f8d466;
 				}
 				&:hover{
 					background:#f8d466;
@@ -5781,7 +5883,7 @@ h3 {
 			&.red{
 				border-color:#fc4e14;
 				em{
-					border-top: 2px solid #fc4e14;
+					border-bottom: 2px solid #fc4e14;
 				}
 				&:hover{
 					background:#fc4e14;
