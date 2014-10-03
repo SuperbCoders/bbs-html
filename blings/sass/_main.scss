@@ -5635,10 +5635,12 @@ h3 {
 			display:none;
 		}
 	}
-	
+	#js-course {
+		margin-bottom: 25px;
+	}
 	table.ui-datepicker-calendar{
 		width:100%;
-		tr th {
+		th {
 			font-size:23px;
 			color:#c2c2c2;
 			text-transform:uppercase;
@@ -5648,19 +5650,18 @@ h3 {
 				color:#ff583d;
 			}
 		}
-		tbody td {
+		td {
+			padding-bottom: 8px;
 			vertical-align: top;
 			color: #000;
 			.cover {
 				min-height: 100px;
-				padding: 8px 0;
+				padding: 8px 0 0 0;
 				border: 2px solid #fff;
-				&:hover {
-					border-color: #f5f5f5;
-				}
+				
 			}
 			.crop {
-				height: 100px;
+				height: 96px;
 				position: relative;
 				overflow: hidden;
 				&:after {
@@ -5688,8 +5689,46 @@ h3 {
 					background: #596073;
 				}
 			}
+			.single-lesson {
+				display: block;
+				visibility: hidden;
+				height: 35px;
+				margin: 0 -18px;
+				border: 2px solid #fc4e14;
+				font-size: 14px;
+				line-height: 37px;
+				text-align: center;
+				text-transform: uppercase;
+				.price {
+					display: block;
+					height: 35px;
+					color: #fc4e14;
+				}
+				.capt {
+					display: none;
+					height: 35px;
+					color: #fff;
+					background: #fc4e14;
+				}
+				&:hover{
+					.price {
+						display: none;
+					}
+					.capt {
+						display: block;
+					}
+				}
+			}
+			&.ui-datepicker-lesson {
+				.cover:hover {
+					border-color: #f5f5f5;
+					.single-lesson {
+						visibility: visible;
+					}
+				}
+			}
 			.cover-show {
-				width: 142px;
+				width: 140px;
 				position: absolute;
 				border: 2px solid #f5f5f5;
 				background: #fff;
@@ -5701,6 +5740,9 @@ h3 {
 				}
 				.more-lesson {
 					display: none;
+				}
+				.single-lesson {
+					visibility: visible;
 				}
 			}
 			.ui-state-default{
@@ -5774,33 +5816,11 @@ h3 {
 					margin-bottom: 8px;
 					@extend .regular;
 				}
-				.single-lesson{
-					display: block;
-					height: 35px;
-					margin: 0 -18px;
-					border: 2px solid #fc4e14;
-					font-size: 14px;
-					line-height: 37px;
-					text-align: center;
-					text-transform: uppercase;
-					.price {
-						display: block;
-						height: 35px;
-						color: #fc4e14;
-					}
-					.capt {
-						display: none;
-						height: 35px;
-						color: #fff;
-						background: #fc4e14;
-					}
-					&:hover{
-						.price {
-							display: none;
-						}
-						.capt {
-							display: block;
-						}
+			}
+			.items {
+				.item {
+					&:last-child {
+						padding-bottom: 0;
 					}
 				}
 			}
