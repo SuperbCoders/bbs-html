@@ -5691,7 +5691,6 @@ h3 {
 			}
 			.single-lesson {
 				display: block;
-				visibility: hidden;
 				height: 35px;
 				margin: 0 -18px;
 				border: 2px solid #fc4e14;
@@ -5722,9 +5721,6 @@ h3 {
 			&.ui-datepicker-lesson {
 				.cover:hover {
 					border-color: #f5f5f5;
-					.single-lesson {
-						visibility: visible;
-					}
 				}
 			}
 			.cover-show {
