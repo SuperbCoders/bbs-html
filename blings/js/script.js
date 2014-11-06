@@ -39,4 +39,7 @@ $(function(){
 	$('#safe-hint .close').click(function(){$('#safe-hint').hide();return false;});
 	$('.more-lesson').click(function(){$(this).parents('.cover').addClass('cover-show');return false;});
 	if($('.ui-datepicker-calendar').length){$(document).click(function(event){if($(event.target).closest('.cover-show').length) return; $('.cover').removeClass('cover-show'); event.stopPropagation();});};
+	$('.case-calend .ui-datepicker-pull .ui-state-default').click(function(){$(this).parent('.cover').find('.drop').toggle();return false;});
+	$('.case-calend .time-list span').click(function(){$(this).parent('li').addClass('current').siblings('li').removeClass('current');return false;});
+	$('.case-calend .preorder .btn-cut').click(function(){$(this).parents('.drop').find('.preorder').hide();$(this).parents('.drop').find('.order').show();return false;});
 });

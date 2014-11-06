@@ -1778,72 +1778,82 @@ h3 {
 				repeat: no-repeat;
 				size: cover;
 			}
-			.map-wrap {
-				display: none;
-				width: 100%;
+		}
+		.info {
+			height: 650px;
+			position: relative;
+			background: {
+				color: #000;
+				position: 50% 0;
+				repeat: no-repeat;
+				size: cover;
+			}
+		}
+		.map-wrap {
+			display: none;
+			width: 100%;
+			height: 650px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+			.map-addr {
 				height: 650px;
+				background: #e9e5db;
+				.gmnoprint {
+					display: none;
+				}
+			}
+			.btn-wrap {
+				width: 134px;
+				margin-left: -67px;
 				position: absolute;
-				top: 0;
-				left: 0;
+				left: 50%;
+				bottom: 70px;
 				z-index: 100;
-				.map-addr {
-					height: 650px;
-					background: #e9e5db;
-					.gmnoprint {
-						display: none;
-					}
-				}
-				.btn-wrap {
-					width: 134px;
-					margin-left: -67px;
-					position: absolute;
-					left: 50%;
-					bottom: 70px;
-					z-index: 100;
-				}
-				.btn {
-					display: block;
-					height: 40px;
-					color: #000;
-					font-size: 14px;
-					@extend .bold;
-					line-height: 42px;
-					text-align: center;
-					text-transform: uppercase;
-					text-decoration: none;
-					border: 2px solid #fa4934;
-					background: #fff;
-					@include respond-to(large-screen) {
-						&:hover {
-							color: #fff;
-							background: #fa4934;
-						}
+			}
+			.btn {
+				display: block;
+				height: 40px;
+				color: #000;
+				font-size: 14px;
+				@extend .bold;
+				line-height: 42px;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				border: 2px solid #fa4934;
+				background: #fff;
+				@include respond-to(large-screen) {
+					&:hover {
+						color: #fff;
+						background: #fa4934;
 					}
 				}
 			}
-			.descript {
-				padding-top: 210px;
-				font-size: 34px;
-				@extend .bold;
-				text-align: center;
-				.icon {
-					display: block;
-					width: 37px;
-					height: 53px;
-					margin: 0 auto;
-					margin-bottom: 20px;
-					@include retina-sprite(con_mark);
-				}
-				.addr {
-					margin-bottom: 20px;
-					.dot {
-						display: inline-block;
-						line-height: 1.1;
-						border-bottom: 2px dotted #fff;
-						a {
-							color: #fff;
+		}
+		.descript {
+			padding-top: 220px;
+			font-size: 34px;
+			@extend .bold;
+			text-align: center;
+			.icon {
+				display: block;
+				width: 37px;
+				height: 53px;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				@include retina-sprite(con_mark);
+			}
+			.addr {
+				margin-bottom: 20px;
+				.dot {
+					display: inline-block;
+					line-height: 1.1;
+					border-bottom: 2px dotted #fff;
+					a {
+						color: #fff;
 
-						}
 					}
 				}
 			}
@@ -1870,27 +1880,30 @@ h3 {
 					width: auto;
 					height: 210px;
 					float: none;
-					.map-wrap {
+				}
+				.info {
+					height: 210px;
+				}
+				.map-wrap {
+					height: 210px;
+					.map-addr {
 						height: 210px;
-						.map-addr {
-							height: 210px;
-						}
-						.btn-wrap {
-							bottom: 50px;
-						}
 					}
-					.descript {
-						.icon {
-							width: 22px;
-							height: 29px;
-							margin-bottom: 10px;
-							@include retina-sprite(con_mark-small);
-						}
-						padding-top: 60px;
-						font-size: 20px;
-						.addr {
-							margin-bottom: 14px;
-						}
+					.btn-wrap {
+						bottom: 50px;
+					}
+				}
+				.descript {
+					.icon {
+						width: 22px;
+						height: 29px;
+						margin-bottom: 10px;
+						@include retina-sprite(con_mark-small);
+					}
+					padding-top: 60px;
+					font-size: 20px;
+					.addr {
+						margin-bottom: 14px;
 					}
 				}
 			}
@@ -4997,12 +5010,7 @@ h3 {
 			}
 		}
 		.col1 {
-			.back {
-				color: #fff;
-				.icon {
-					@include retina-sprite(arrow_back_w);
-				}
-			}
+
 		}
 	}
 	.menu {
@@ -5556,7 +5564,7 @@ h3 {
 		position:relative;
 		font-size:23px;
 		text-transform:uppercase;
-		font-weight:bold;
+		@extend .bold;
 		.ui-datepicker-title{
 			color:#000;
 			text-align:center;
@@ -5644,7 +5652,7 @@ h3 {
 			font-size:23px;
 			color:#c2c2c2;
 			text-transform:uppercase;
-			font-weight:bold;
+			@extend .bold;
 			padding-bottom:35px;
 			&.ui-datepicker-week-end{
 				color:#ff583d;
@@ -5728,6 +5736,7 @@ h3 {
 				position: absolute;
 				border: 2px solid #f5f5f5;
 				background: #fff;
+				z-index: 100;
 				.crop {
 					height: auto;
 					&:after {
@@ -6014,5 +6023,521 @@ h3 {
 				}
 			}
 		}
+	}
+}
+
+.fs24 {font-size: 24px!important;}
+
+#master {
+	.page-header-top {
+		height: auto;
+		padding-top: 75px;
+		padding-bottom: 40px;
+		.back {
+			margin-top: 25px;
+		}
+		.label {
+			margin-bottom: 25px;
+			span {
+				display: inline-block;
+				height: 31px;
+				padding: 0 10px;
+				color: #000;
+				font-size: 18px;
+				@extend .bold;
+				line-height: 33px;
+				text-transform: uppercase;
+				border: 2px solid #000;
+			}
+		}
+		.intro {
+			min-height: 370px;
+			padding: 0 100px;
+			text-align: center;
+			@include respond-to(medium-screen) {
+				min-height: 150px;
+				padding: 0 20px;
+			}
+			.descript {
+				padding-top: 70px;
+				padding-bottom: 70px;
+				margin: 0;
+				font-size: 26px;
+				line-height: 1.5;
+				@include respond-to(medium-screen) {
+					font-size: 22px;
+				}
+			}
+			.list {
+				text-align: center;
+				.ttl {
+					margin-bottom: 10px;
+					font-size: 12px;
+					@extend .bold;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+				.icon {
+					display: inline-block;
+					width: 11px;
+					height: 7px;
+					@include retina-sprite(arr_dn);
+				}
+			}
+		}
+	}
+	.page-header-inverse {
+		.label {
+			span {
+				color: #fff;
+				border: 2px solid #fff;
+			}
+		}
+	}
+}
+
+.case-masters {
+	.caption {
+		margin-bottom: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		h2 {
+			font-size: 24px;
+		}
+	}
+	.items {
+		text-align: center;
+	}
+	.item {
+		display: inline-block;
+		width: 140px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 20px;
+		figure {
+			width: 140px;
+			height: 140px;
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+		.name {
+			margin-bottom: 10px;
+			font-size: 18px;
+			@extend .bold;
+		}
+		.price {
+			height: 33px;
+			margin-bottom: 10px;
+			color: #585e66;
+			font-size: 14px;
+			line-height: 35px;
+			text-align: center;
+			@include retina-sprite(master_price);
+		}
+		&:hover {
+			.price {
+				color: #fff;
+				@include retina-sprite(master_price-hover);
+			}
+		}
+		.link {
+			color: #585e66;
+			font-size: 14px;
+			&:hover {
+				color: #ff583d;
+			}
+		}
+	}
+}
+
+.case-inform {
+	.caption {
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		h2 {
+			font-size: 24px;
+		}
+	}
+	.cnt {
+		padding: 0 180px;
+		text-align: center;
+		@include respond-to(medium-screen) {
+			padding: 0 20px;
+		}
+	}
+	.text {
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		a {
+			color: #ff583d;
+		}
+	}
+	.social {
+		height: 25px;
+		overflow: hidden;
+		li {
+			display: inline-block;
+			height: 18px;
+			margin: 0 10px;
+			a {
+				display: block;
+			}
+			&.vk {
+				.icon {
+					width: 12px;
+					height: 14px;
+					margin-top: 4px;
+					@include retina-sprite(vk_bw);
+					&:hover {
+						@include retina-sprite(vk_c);
+					}
+				}
+			}
+			&.fb {
+				.icon {
+					width: 9px;
+					height: 18px;
+					@include retina-sprite(fb_bw);
+					&:hover {
+						@include retina-sprite(fb_c);
+					}
+				}
+			}
+		}
+	}
+}
+
+.case-calend {
+	margin-bottom: 50px;
+	background: #edeff2;
+	.caption {
+		margin-bottom: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		h2 {
+			font-size: 24px;
+		}
+	}
+	.price-wrap {
+		padding-top: 40px;
+		text-align: center;
+	}
+	.price {
+		display: inline-block;
+		height: 42px;
+		padding: 0 24px;
+		position: relative;
+		color: #fff;
+		font-size: 16px;
+		@extend .bold;
+		line-height: 45px;
+		text-transform: uppercase;
+		background: #ff583d;
+		&:before {
+			display: block;
+			content: '';
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-left: 10px solid #fff;
+			border-top: 21px solid #ff583d;
+			border-bottom: 21px solid #ff583d;
+		}
+		&:after {
+			display: block;
+			content: '';
+			width: 0;
+			height: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border-right: 10px solid #fff;
+			border-top: 21px solid #ff583d;
+			border-bottom: 21px solid #ff583d;
+		}
+	}
+	.calend {
+		max-width: 500px;
+		padding: 40px;
+		margin: 0 auto;
+		position: relative;
+		background: #fff;
+		.note {
+			width: 130px;
+			padding-right: 10px;
+			position: absolute;
+			left: -140px;
+			top: 120px;
+			font-size: 14px;
+			line-height: 1.5;
+			&:after {
+				display: block;
+				content: '';
+				width: 98px;
+				height: 44px;
+				position: absolute;
+				bottom: -55px;
+				right: -42px;
+				background: image-url("arc.png") repeat 0 0;
+			}
+		}
+		.drop {
+			display: none;
+			width: 220px;
+			padding: 20px;
+			position: absolute;
+			top: 39px;
+			right: -1px;
+			background: #fff;
+			box-shadow: 0 2px 8px 0 rgba(#000,0.2);
+			z-index: 10;
+			&:before {
+				display: block;
+				content: '';
+				width: 14px;
+				height: 14px;
+				position: absolute;
+				top: -7px;
+				right: 30px;
+				background: #fff;
+				@include box-shadow(0 0 4px rgba(#000,0.2));
+				@include rotate(45deg);
+			}
+			&:after {
+				display: block;
+				content: '';
+				width: 100%;
+				height: 15px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: #fff;
+			}
+			.order {
+				display: none;
+			}
+			.title {
+				margin-bottom: 25px;
+				font-size: 16px;
+				@extend .bold;
+				line-height: 1.2;
+				text-transform: uppercase;
+			}
+			.descript {
+				padding: 20px 0;
+				font-size: 15px;
+				line-height: 1.4;
+			}
+			.sep {
+				width: 100px;
+				height: 1px;
+				margin: 0 auto;
+				border-bottom: 1px solid #dedede;
+			}
+			.time {
+				margin-bottom: 10px;
+				text-align: center;
+				.icon {
+					display: inline-block;
+					width: 62px;
+					height: 62px;
+					margin-bottom: 10px;
+					@include retina-sprite(master_ok-b);
+				}
+				p {
+					color: #fc4e14;
+					font-size: 34px;
+					line-height: 1.2;
+				}
+			}
+			.time-list {
+				padding-bottom: 10px;
+				li {
+					margin-bottom: 15px;
+					font-size: 22px;
+					&.strike {
+						span {
+							color: #b9c2c9;
+							text-decoration: line-through;
+							cursor: default;
+						}
+					}
+					&.current {
+						span {
+							color: #fc4e14;
+							&:before {
+								display: block;
+								content: '';
+								width: 24px;
+								height: 24px;
+								position: absolute;
+								top: 2px;
+								left: -30px;
+								@include retina-sprite(master_ok-s);
+							}
+						}
+					}
+				}
+				span {
+					position: relative;
+					cursor: pointer;
+					@include respond-to(large-screen) {
+						&:hover {
+							color: #fc4e14;
+						}
+					}
+				}
+			}
+		}
+		.btn-cut {
+			display: block;
+			height: 40px;
+			color: #000;
+			font-size: 14px;
+			@extend .bold;
+			line-height: 42px;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 2px solid #fa4934;
+			background: #fff;
+			@include respond-to(large-screen) {
+				&:hover {
+					color: #fff;
+					background: #fa4934;
+				}
+			}
+		}
+		.btn {
+			display: block;
+			height: 40px;
+			color: #fff;
+			font-size: 14px;
+			@extend .bold;
+			line-height: 42px;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 2px solid #fa4934;
+			background: #fa4934;
+			@include respond-to(large-screen) {
+				&:hover {
+					color: #000;
+					background: #fff;
+				}
+			}
+		}
+	}
+	.ui-datepicker-header{
+		margin: 0 50px;
+		padding-bottom: 30px;
+		width: 200px;
+		position :relative;
+		font-size: 16px;
+		@extend .bold;
+		text-transform: uppercase;
+		.ui-datepicker-title{
+			color:#000;
+			text-align:center;
+		}
+		.ui-datepicker-next {
+			display: inline-block;
+			width: 200px;
+			position:absolute;
+			top: 0;
+			right: -100%;
+			color: #b3b7bd;
+			text-align:center;
+			cursor:pointer;
+		}
+	}
+	table.ui-datepicker-calendar {
+		width:100%;
+		th {
+			padding-bottom: 20px;
+			color: #c2c2c2;
+			font-size: 22px;
+			@extend .bold;
+			text-align: center;
+			text-transform: uppercase;
+			&.ui-datepicker-week-end {
+				color:#ff583d;
+			}
+		}
+		td {
+			padding-bottom: 10px;
+			vertical-align: top;
+			text-align: center;
+			.ui-state-default {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				color: #c2c2c2;
+				font-size: 14px;
+				line-height: 32px;
+				text-align: center;
+			}
+			&.ui-datepicker-pull {
+				.ui-state-default {
+					color: #000;
+					@extend .bold;
+					cursor: pointer;
+					@include respond-to(large-screen) {
+						&:hover {
+							background: #f5f5f5;
+							border-radius: 50%;
+						}
+					}
+				}
+			}
+			&.ui-datepicker-select {
+				.ui-state-default {
+					height: 26px;
+					width: 24px;
+					color: #000;
+					@extend .bold;
+					line-height: 28px;
+					border: 2px solid #ff583d;
+					cursor: pointer;
+				}
+			}
+			.cover {
+				position: relative;
+			}
+		}
+	}
+}
+
+.reserv {
+	padding: 50px 0;
+	text-align: center;
+	.icon {
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 30px;
+		@include retina-sprite(master_ok-bb);
+	}
+	.info {
+		margin-bottom: 30px;
+		font-size: 44px;
+		line-height: 1.2;
+	}
+	.goto {
+		margin-bottom: 110px;
+		font-size: 18px;
+		a {
+			color: #fc4e14;
+			text-decoration: underline;
+		}
+	}
+	.copyright {
+		font-size: 13px;
+		font-family: Tahoma, Arial, Helvetica, serif;
 	}
 }
