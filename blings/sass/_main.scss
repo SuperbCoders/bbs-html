@@ -3181,6 +3181,87 @@ h3 {
 		margin-bottom: 40px;
 		text-transform: uppercase;
 		text-align: center;
+		
+		&._tt-n {
+			text-transform: none;
+		}
+	}
+	.special-text {
+		text-align: center;
+		font-size: 18px;
+		line-height: 22px;
+		letter-spacing: .045em;
+        margin: -25px 0 33px;
+	}
+	.special-block {
+		border: 1px solid #e8e8e8;
+		padding: 64px 5px;
+		position: relative;
+		width: 480px;
+		margin: 25px auto 20px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-ms-flex-pack: justify;
+		-webkit-box-pack: start;
+		justify-content: space-between;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		-webkit-box-pack: justify;
+		-webkit-box-align: start;
+	}
+	.special-img {
+		position: relative;
+		width: 50%;
+		text-align: center;
+		img {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	.special-name {
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+	.special-info {
+        width: 47%;
+        padding: 22px 0 30px;;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-flow: column nowrap;
+		flex-flow: column nowrap;
+		-ms-flex-pack: justify;
+		-webkit-box-pack: start;
+		justify-content: space-around;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		-webkit-box-pack: justify;
+		-webkit-box-align: start;
+		
+		.special-price_block {
+			font-size: 20px;
+			overflow: hidden;
+		}
+		
+		.old-price {
+			text-decoration: line-through;
+			float: left;
+			font-size: 20px;
+			color: #000;
+			padding-right: 9px;
+		}
+		.new-price {
+			float: left;
+			font-size: 22px;
+			color: #f20404;
+		}
 	}
 	.step {
 		margin-bottom: 30px;
@@ -3608,6 +3689,14 @@ h3 {
 					font-size: 12px;
 					width: 280px;
 				}
+			}
+			
+			.cancel-link {
+				display: inline-block;
+				vertical-align: top;
+				margin: 35px 0 15px;
+                font-size: 14px;
+                color: #000;
 			}
 		}
 	}
@@ -4130,6 +4219,9 @@ h3 {
 		.agent {
 			color: #686767;
 			font-size: 15px;
+		}
+		.widget-wrapper {
+			margin-top: 25px;
 		}
 	}
 }
@@ -6545,4 +6637,8 @@ h3 {
 		font-size: 13px;
 		font-family: Tahoma, Arial, Helvetica, serif;
 	}
+}
+
+.text-center {
+	text-align: center;
 }
