@@ -3194,25 +3194,27 @@ h3 {
         margin: -25px 0 33px;
 	}
 	.special-block {
-		border: 1px solid #e8e8e8;
-		padding: 64px 5px;
-		position: relative;
-		width: 480px;
-		margin: 25px auto 20px;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		-ms-flex-flow: row nowrap;
-		flex-flow: row nowrap;
-		-ms-flex-pack: justify;
-		-webkit-box-pack: start;
-		justify-content: space-between;
-		-ms-flex-align: stretch;
-		align-items: stretch;
-		-webkit-box-pack: justify;
-		-webkit-box-align: start;
+		text-align: center;
+		
+		.descript {
+			text-align: left;
+		}
+		.old-price {
+			text-decoration: line-through;
+			color: #000;
+			padding-right: 9px;
+		}
+		.new-price {
+			color: #f20404;
+		}
+		.items {
+			display: inline-block;
+			vertical-align: top;
+			
+			.item {
+				margin: 0 0 20px;
+			}
+		}
 	}
 	.special-img {
 		position: relative;
@@ -4197,6 +4199,10 @@ h3 {
 	text-align: center;
 	.prop {
 		padding: 0 20px;
+		
+		h1 {
+			padding: 18px 0;
+		}
 	}
 	.label {
 		margin: 0 auto 25px;
