@@ -1,6 +1,7 @@
 $sprites: sprite-map("sprites/*.png", $spacing: 5px);
 $sprites2x: sprite-map("sprites-retina/*.png", $spacing: 10px);
 
+$screen-phone: 375px;
 $break-small: 480px;
 $break-middle: 768px;
 $break-large: 980px;

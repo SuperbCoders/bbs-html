@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bling-blings</title>
 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" href="css/style.css" />
@@ -26,7 +27,7 @@
 	<script type="text/javascript">
 		$(function(){
 			$(window).load(function(){
-				$('#carousel7').carouFredSel({circular:1,auto:false,responsive:true,width:'100%',height:'verible',scroll:1,prev:'#prev7',next:'#next7',items: {height: '100%',visible:{min:1,max:3},start:-1},swipe:{onMouse:true,onTouch:true}}).trigger('resize');
+				$('#carousel7').carouFredSel({circular:1,auto:false,responsive:true,width:'100%',height:'verible',scroll:1,prev:'#prev7',next:'#next7',pagination:'#pager7',items: {height: '100%',visible:{min:1,max:3},start:-1},swipe:{onMouse:true,onTouch:true}}).trigger('resize');
 			});
 		});
 	</script>
@@ -278,6 +279,18 @@
 					<a class="close" href="#"></a>
 				</div>
 			</section>
+      <section class="page-header-mid visible-phone">
+        <div class="tm-overlay">
+          <nav class="tm">
+            <ul>
+              <li><a href="#">Украшения</a></li>
+              <li><a href="#">Косметика</a></li>
+              <li><a href="#">Аксессуары</a></li>
+              <li><a href="#">Интенсив</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
 			<section class="page-header-bt hidden-tablet">
 				<div class="container">
 					<div class="prop">
@@ -371,6 +384,7 @@
 					</ul>
 					<a id="prev7" class="arr prev hidden-tablet" href="#"><i class="icon"></i></a>
 					<a id="next7" class="arr next hidden-tablet" href="#"><i class="icon"></i></a>
+          <div id="pager7" class="pager"></div>
 				</section>
 				<section class="description">
 					<div class="container">
@@ -717,6 +731,9 @@
 						</div>
 					</div>
 				</section>
+        <section class="catalog-back">
+					<a class="btn" href="catalog.html">Перейти в каталог</a>
+				</section>
 			</section>
 		</section>
 		<footer class="page-footer">
@@ -747,6 +764,7 @@
 				</ul>
 			</div>
 		</footer>
+    <a class="btn btn-buy-now" href="#">Купить</a>
 	</div>
 	<div id="popup-form" class="mfp-hide white-popup-block">
 		<div class="popup-hint hidden-tablet">
